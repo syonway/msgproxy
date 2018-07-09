@@ -1,0 +1,867 @@
+2018-05-30 19:36:42,858 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-05-30 19:36:42,861 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:38496) authen ok 
+2018-05-30 19:36:42,862 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:38496) auhentic ok
+2018-05-30 19:36:43,054 ERROR [Thread-6] DataMonitor2CntAppServSock [AppServSock.java:300]  15000 no idle msg, close
+2018-05-30 19:36:43,055 INFO [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:90] sock.check remover
+2018-05-30 19:36:43,470 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:38498
+2018-05-30 19:36:43,472 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=4146327dde1a039756ec53e825d05f59
+2018-05-30 19:36:43,474 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 19:36:43,475 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:38498) authen ok 
+2018-05-30 19:36:43,475 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:38498) auhentic ok
+2018-05-30 19:36:43,625 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:38500
+2018-05-30 19:36:43,628 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=2c31aa140e488f1f3b2b6c6eb0b64f9c
+2018-05-30 19:36:43,630 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-05-30 19:36:43,631 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:38500) authen ok 
+2018-05-30 19:36:43,631 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:38500) auhentic ok
+2018-05-30 19:36:44,195 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59092
+2018-05-30 19:36:44,196 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=a0d88a1229229e2ef7ee5a91ec01e221
+2018-05-30 19:36:44,197 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-05-30 19:36:44,197 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59092) authen ok 
+2018-05-30 19:36:44,197 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59092
+2018-05-30 19:36:44,227 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59094
+2018-05-30 19:36:44,229 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=eb6fe98a954e78b84172c75293b1ced2
+2018-05-30 19:36:44,230 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 19:36:44,231 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59094) authen ok 
+2018-05-30 19:36:44,232 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59094
+2018-05-30 19:38:47,619 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@42e99e4a to monitor 1000
+2018-05-30 19:38:47,624 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@42e99e4a) to monitor(1000)
+2018-05-30 19:38:47,678 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data:{"ip":"233.233.233.233","port":54321,"channelName":"zjws","recordPath":"/ts/zjws","nasIp":"10.108.157.177"}, response: {
+   "response" : {
+      "code" : 0,
+      "info" : "ok"
+   },
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+
+
+2018-05-30 19:38:54,863 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@52e6fdee to monitor 1000
+2018-05-30 19:38:54,876 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@52e6fdee) to monitor(1000)
+2018-05-30 19:38:54,902 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data: , response: {
+   "tasks" : [
+      {
+         "channelName" : "zjws",
+         "ip" : "233.233.233.233",
+         "nasIp" : "10.108.157.177",
+         "port" : 54321,
+         "recordPath" : "/ts/zjws"
+      }
+   ]
+}
+
+
+2018-05-30 19:39:41,646 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@62150f9e to monitor 1000
+2018-05-30 19:39:41,651 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@62150f9e) to monitor(1000)
+2018-05-30 19:39:41,660 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data: , response: {
+   "tasks" : [
+      {
+         "channelName" : "zjws",
+         "ip" : "233.233.233.233",
+         "nasIp" : "10.108.157.177",
+         "port" : 54321,
+         "recordPath" : "/ts/zjws"
+      }
+   ]
+}
+
+
+2018-05-30 19:41:53,403 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@7fa98a66 to monitor 1000
+2018-05-30 19:41:53,409 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@7fa98a66) to monitor(1000)
+2018-05-30 19:41:53,421 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data: , response: {
+   "tasks" : [
+      {
+         "channelName" : "zjws",
+         "ip" : "233.233.233.233",
+         "nasIp" : "10.108.157.177",
+         "port" : 54321,
+         "recordPath" : "/ts/zjws"
+      }
+   ]
+}
+
+
+2018-05-30 19:41:54,864 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@5fdcaa40 to monitor 1000
+2018-05-30 19:41:54,868 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@5fdcaa40) to monitor(1000)
+2018-05-30 19:41:54,883 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data: , response: {
+   "tasks" : [
+      {
+         "channelName" : "zjws",
+         "ip" : "233.233.233.233",
+         "nasIp" : "10.108.157.177",
+         "port" : 54321,
+         "recordPath" : "/ts/zjws"
+      }
+   ]
+}
+
+
+2018-05-30 19:42:00,002 INFO [Thread-6] DataMonitor2CntAppServSock [AppServSock.java:151] address=/10.108.159.42:59094 close socket
+2018-05-30 19:42:00,002 DEBUG [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:69] sock.eventPrc error. close, remove
+2018-05-30 19:42:01,270 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:38528
+2018-05-30 19:42:01,270 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59118
+2018-05-30 19:42:01,274 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=1abefd7885072bc10b83cb2389954e9d
+2018-05-30 19:42:01,275 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=a69618e8d130ae08b34b132dd82efb56
+2018-05-30 19:42:01,281 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 19:42:01,282 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 19:42:01,285 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:38528) authen ok 
+2018-05-30 19:42:01,286 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59118) authen ok 
+2018-05-30 19:42:01,287 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:38528) auhentic ok
+2018-05-30 19:42:01,288 ERROR [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:146] monitor(1000) DataCnt2MonitorCmdAppClntSock aleady connect, close the old connect
+2018-05-30 19:42:01,289 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59118
+2018-05-30 19:42:02,898 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@5e0826e7 to monitor 1000
+2018-05-30 19:42:02,903 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@5e0826e7) to monitor(1000)
+2018-05-30 19:42:02,916 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data: , response: {
+   "tasks" : []
+}
+
+
+2018-05-30 19:42:19,049 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@32eff876 to monitor 1000
+2018-05-30 19:42:19,054 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@32eff876) to monitor(1000)
+2018-05-30 19:42:19,065 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data:{"ip":"233.233.233.233","port":54321,"channelName":"zjws","recordPath":"/ts/zjws","nasIp":"10.108.157.177"}, response: {
+   "response" : {
+      "code" : 0,
+      "info" : "ok"
+   },
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+
+
+2018-05-30 19:49:32,520 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@8dbdac1 to monitor 1000
+2018-05-30 19:49:32,527 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@8dbdac1) to monitor(1000)
+2018-05-30 19:49:32,539 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data:{"ip":"233.233.233.233","port":54321,"channelName":"zjws","recordPath":"/ts/zjws","nasIp":"10.108.157.177"}, response: {
+   "response" : {
+      "code" : -1,
+      "info" : "ip:port=233.233.233.233:54321,channelNamezjws,recordPath=/ts/zjws, nasIp10.108.157.177 already exist run."
+   },
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+
+
+2018-05-30 19:49:58,588 INFO [Thread-6] DataMonitor2CntAppServSock [AppServSock.java:151] address=/10.108.159.42:59118 close socket
+2018-05-30 19:49:58,589 DEBUG [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:69] sock.eventPrc error. close, remove
+2018-05-30 19:49:59,552 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59130
+2018-05-30 19:49:59,553 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=aee9fc2c6c40457305c5e79f568aaa3f
+2018-05-30 19:49:59,554 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:38544
+2018-05-30 19:49:59,556 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=bbab5ef19f406445b835bce4db90f37c
+2018-05-30 19:49:59,556 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 19:49:59,558 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59130) authen ok 
+2018-05-30 19:49:59,559 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 19:49:59,559 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59130
+2018-05-30 19:49:59,559 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:38544) authen ok 
+2018-05-30 19:49:59,560 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:38544) auhentic ok
+2018-05-30 19:49:59,563 ERROR [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:146] monitor(1000) DataCnt2MonitorCmdAppClntSock aleady connect, close the old connect
+2018-05-30 21:19:09,896 INFO [Thread-6] DataMonitor2CntAppServSock [AppServSock.java:151] address=/10.108.159.42:59130 close socket
+2018-05-30 21:19:09,902 DEBUG [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:69] sock.eventPrc error. close, remove
+2018-05-30 21:19:10,657 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:38626
+2018-05-30 21:19:10,658 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=18e4239145e57dde9dc009e01f802c32
+2018-05-30 21:19:10,661 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59212
+2018-05-30 21:19:10,662 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=a11d2f276ceab4672a2e8e2477e331e8
+2018-05-30 21:19:10,665 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 21:19:10,665 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:38626) authen ok 
+2018-05-30 21:19:10,665 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:38626) auhentic ok
+2018-05-30 21:19:10,669 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-05-30 21:19:10,669 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59212) authen ok 
+2018-05-30 21:19:10,670 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59212
+2018-05-30 21:19:10,670 ERROR [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:146] monitor(1000) DataCnt2MonitorCmdAppClntSock aleady connect, close the old connect
+2018-05-30 21:19:54,605 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@6e20b53a to monitor 1000
+2018-05-30 21:19:54,611 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@6e20b53a) to monitor(1000)
+2018-05-30 21:19:54,642 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 21:19:54,647 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 1000, data:{"ip":"233.233.233.233","port":54321,"channelName":"zjws","recordPath":"/ts/zjws","nasIp":"10.108.157.177"}, response: {
+   "response" : {
+      "code" : 0,
+      "info" : "ok"
+   },
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+
+
+2018-05-30 21:19:54,656 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@21c3a995:1527686394660
+2018-05-30 21:19:54,658 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 21:19:54,658 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 21:19:54,665 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 21:19:54,668 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 21:19:54,668 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 21:19:54,668 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 21:19:54,668 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 21:19:54,669 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 21:29:55,071 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 21:29:55,073 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@35e0cfe8:1527686394660
+2018-05-30 21:29:55,074 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 21:29:55,074 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 21:29:55,075 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 21:29:55,076 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 21:29:55,076 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 21:29:55,076 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 21:29:55,076 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 21:29:55,076 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 21:39:55,074 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 21:39:55,079 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@ac705fe:1527686394660
+2018-05-30 21:39:55,081 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 21:39:55,081 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 21:39:55,087 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 21:39:55,087 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 21:39:55,087 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 21:39:55,087 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 21:39:55,087 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 21:39:55,087 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 21:49:55,373 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 21:49:55,375 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@75e561cd:1527686394660
+2018-05-30 21:49:55,376 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 21:49:55,376 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 21:49:55,377 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 21:49:55,377 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 21:49:55,377 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 21:49:55,377 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 21:49:55,377 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 21:49:55,378 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 21:59:55,393 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 21:59:55,397 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@46c97f16:1527686394660
+2018-05-30 21:59:55,399 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 21:59:55,400 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 21:59:55,400 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 21:59:55,400 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 21:59:55,401 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 21:59:55,402 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 21:59:55,402 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 21:59:55,402 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 22:09:55,370 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 22:09:55,372 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@74137ac4:1527686394660
+2018-05-30 22:09:55,373 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 22:09:55,373 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 22:09:55,379 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 22:09:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 22:09:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 22:09:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 22:09:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 22:09:55,380 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 22:19:55,372 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 22:19:55,374 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@a08efcb:1527686394660
+2018-05-30 22:19:55,376 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 22:19:55,377 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 22:19:55,382 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 22:19:55,382 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 22:19:55,383 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 22:19:55,383 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 22:19:55,383 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 22:19:55,384 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 22:29:55,373 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 22:29:55,379 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@54bd1c4e:1527686394660
+2018-05-30 22:29:55,382 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 22:29:55,382 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 22:29:55,387 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 22:29:55,387 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 22:29:55,387 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 22:29:55,387 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 22:29:55,387 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 22:29:55,388 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 22:39:55,365 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 22:39:55,367 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@5901f800:1527686394660
+2018-05-30 22:39:55,374 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 22:39:55,374 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 22:39:55,379 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 22:39:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 22:39:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 22:39:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 22:39:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 22:39:55,379 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 22:49:55,731 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=1000,dataid=1011,data='{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+'
+2018-05-30 22:49:55,740 INFO [Thread-9] RecvMsg [RecvMsg.java:81] com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask@36ab6cbe:1527686394660
+2018-05-30 22:49:55,742 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 1000, data:{
+   "recordFrameTime" : "1527686394660",
+   "task" : {
+      "channelName" : "zjws",
+      "ip" : "233.233.233.233",
+      "nasIp" : "10.108.157.177",
+      "port" : 54321,
+      "recordPath" : "/ts/zjws"
+   }
+}
+, response
+2018-05-30 22:49:55,742 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=1000,dataid=1011,data='{"code":0,"info":"ok"}'
+2018-05-30 22:49:55,750 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 22:49:55,761 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 22:49:55,761 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 22:49:55,761 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 22:49:55,761 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 22:49:55,762 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 23:05:49,577 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@6aba2b86 to monitor 2000
+2018-05-30 23:05:49,580 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@6aba2b86) to monitor(2000)
+2018-05-30 23:05:49,603 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 2000, data:{"maskid":1,"masks":[],"nasIp":"10.108.157.177","calPath":"/ts/zjws"}, response: {
+   "code" : 0,
+   "info" : "ok"
+}
+
+
+2018-05-30 23:14:19,026 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527715794000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-30 23:14:19,027 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527715794000
+2018-05-30 23:14:19,029 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527715794000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-30 23:14:19,030 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 23:14:19,031 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 23:14:19,031 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 23:14:19,031 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 23:14:19,031 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 23:14:19,031 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 23:14:19,030 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-30 23:23:04,149 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527716394000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-30 23:23:04,149 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527716394000
+2018-05-30 23:23:04,150 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527716394000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-30 23:23:04,150 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-30 23:23:04,155 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 23:23:04,155 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 23:23:04,155 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 23:23:04,155 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 23:23:04,155 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 23:23:04,155 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 23:31:40,575 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527716994000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-30 23:31:40,577 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527716994000
+2018-05-30 23:31:40,577 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527716994000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-30 23:31:40,577 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-30 23:31:40,581 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 23:31:40,582 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 23:31:40,582 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 23:31:40,582 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 23:31:40,582 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 23:31:40,582 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 23:40:17,201 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527717594000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-30 23:40:17,202 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527717594000
+2018-05-30 23:40:17,202 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527717594000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-30 23:40:17,202 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-30 23:40:17,206 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 23:40:17,206 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 23:40:17,206 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 23:40:17,207 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 23:40:17,207 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 23:40:17,207 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 23:48:55,987 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527718194000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-30 23:48:55,988 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527718194000
+2018-05-30 23:48:55,988 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527718194000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-30 23:48:55,988 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-30 23:48:55,993 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 23:48:55,994 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 23:48:55,994 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 23:48:55,994 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 23:48:55,994 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 23:48:55,994 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-30 23:57:39,309 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527718794000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-30 23:57:39,309 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527718794000
+2018-05-30 23:57:39,310 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527718794000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-30 23:57:39,310 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-30 23:57:39,314 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-30 23:57:39,314 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-30 23:57:39,314 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-30 23:57:39,314 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-30 23:57:39,314 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-30 23:57:39,314 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-31 00:06:11,881 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527719394000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-31 00:06:11,882 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527719394000
+2018-05-31 00:06:11,882 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527719394000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-31 00:06:11,882 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-31 00:06:11,885 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-31 00:06:11,886 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-31 00:06:11,886 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-31 00:06:11,886 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-31 00:06:11,886 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-31 00:06:11,886 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+2018-05-31 00:14:48,807 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=2000,dataid=2000,data='{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527719994000",
+   "nasIp" : "10.108.157.177"
+}
+'
+2018-05-31 00:14:48,807 INFO [Thread-9] RecvMsg [RecvMsg.java:62] 10.108.157.177//ts/zjws, caledFrameTime:1527719994000
+2018-05-31 00:14:48,808 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 2000, data:{
+   "calPath" : "/ts/zjws",
+   "caledFrameTime" : "1527719994000",
+   "nasIp" : "10.108.157.177"
+}
+, response
+2018-05-31 00:14:48,808 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=2000,dataid=2000,data='{"code":0,"info":"ok"}'
+2018-05-31 00:14:48,813 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-31 00:14:48,814 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-31 00:14:48,814 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-31 00:14:48,814 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-31 00:14:48,814 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-31 00:14:48,814 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+
+
+
+
+2018-05-31 08:50:22,433 ERROR [Thread-3] DataCnt2MonitorCmdAppClntSock [AppClntSock.java:305] recving time out
+2018-05-31 08:50:22,434 DEBUG [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:229] monitor offline event to thread owned eventlist
+2018-05-31 08:50:22,434 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:188] clear socket 3000
+2018-05-31 08:50:22,434 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:193] call updateMonitorInfo in sock clear
+2018-05-31 08:51:23,744 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39188
+2018-05-31 08:51:23,752 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=0d19924d5e681465f8dd708716355ff7
+2018-05-31 08:51:23,756 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-05-31 08:51:23,757 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39188) authen ok 
+2018-05-31 08:51:23,757 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:39188) auhentic ok
+2018-05-31 08:52:08,755 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@4466af20 to monitor 3000
+2018-05-31 08:52:08,756 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@4466af20) to monitor(3000)
+2018-05-31 08:52:13,756 ERROR [main] DcSendDataMng [DcSendDataMng.java:50] send data cmd failed.
+2018-05-31 08:52:13,763 ERROR [Thread-3] DataCnt2MonitorCmdAppClntSock [AppClntSock.java:305] recving time out
+2018-05-31 08:52:13,766 ERROR [main] SendMsg [SendMsg.java:155] java.lang.NullPointerException
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:844)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2872)
+	at com.guanghui.admonitor.backservice.SendMsg.sendCmdRecvRes(SendMsg.java:153)
+	at com.guanghui.admonitor.backservice.SendMsg.sendCreateRefAdClip(SendMsg.java:162)
+	at com.guanghui.admonitor.DemoMain.sendCmdsProcess(DemoMain.java:213)
+	at com.guanghui.admonitor.DemoMain.commandProcess(DemoMain.java:237)
+	at com.guanghui.admonitor.DemoMain.mainLoop(DemoMain.java:73)
+	at com.guanghui.admonitor.DemoMain.main(DemoMain.java:38)
+
+2018-05-31 08:52:13,766 DEBUG [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:229] monitor offline event to thread owned eventlist
+2018-05-31 08:52:13,767 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:188] clear socket 3000
+2018-05-31 08:52:13,767 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:193] call updateMonitorInfo in sock clear
+2018-05-31 08:52:20,344 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39192
+2018-05-31 08:52:20,346 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=ed9e1ceabf1c3986473aeb59f348b70a
+2018-05-31 08:52:20,348 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-05-31 08:52:20,348 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39192) authen ok 
+2018-05-31 08:52:20,350 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:39192) auhentic ok
+2018-05-31 08:52:45,535 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@6b927fb to monitor 3000
+2018-05-31 08:52:45,542 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@6b927fb) to monitor(3000)
+2018-05-31 08:52:50,537 ERROR [main] DcSendDataMng [DcSendDataMng.java:50] send data cmd failed.
+2018-05-31 08:52:50,537 ERROR [main] SendMsg [SendMsg.java:155] java.lang.NullPointerException
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:844)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2872)
+	at com.guanghui.admonitor.backservice.SendMsg.sendCmdRecvRes(SendMsg.java:153)
+	at com.guanghui.admonitor.backservice.SendMsg.sendCreateRefAdClip(SendMsg.java:162)
+	at com.guanghui.admonitor.DemoMain.sendCmdsProcess(DemoMain.java:213)
+	at com.guanghui.admonitor.DemoMain.commandProcess(DemoMain.java:237)
+	at com.guanghui.admonitor.DemoMain.mainLoop(DemoMain.java:73)
+	at com.guanghui.admonitor.DemoMain.main(DemoMain.java:38)
+
+
+2018-05-31 10:01:24,375 INFO [main] CmdAppClntSockGroup [CmdAppClntSockGroup.java:31] add cmdcom.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@294425a7 to monitor 4000
+2018-05-31 10:01:24,383 INFO [Thread-3] CmdAppClntSockGroup [CmdAppClntSockGroup.java:330] send cmd(com.guanghui.itvm.cnt_cmd.DataCnt2MonitorCmd@294425a7) to monitor(4000)
+2018-05-31 10:01:24,419 INFO [main] DcSendDataMng [DcSendDataMng.java:61] ------
+send to monitor 4000, data:{"taskId":100,"channelPath":"ts/zjws","nasIp":"10.108.157.177","startTime":"1527715194000","endTime":"1527719994000","threshold":0.9,"refAdClips":[{"nasIp":"10.108.157.177","adClipUrls":["ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr"]}]}, response: {
+   "code" : 0,
+   "info" : "ok"
+}
+
+
+2018-05-31 10:01:24,897 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:69] recvdata:monitor_id=4000,dataid=100,data='{
+   "channelPath" : "ts/zjws",
+   "endTime" : "1527719994000",
+   "replayAdClips" : [
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 3,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715447280"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 2,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715447400"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 4,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715449880"//播放开始时间
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 4,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715450040"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 8,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715450200"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 2,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715670040"
+      }
+   ],
+   "startTime" : "1527715194000",
+   "taskId" : 0
+}
+'
+2018-05-31 10:01:24,899 ERROR [Thread-9] TestDatabBase [TestDataBase.java:53] get ts/zjws's channelid=-1
+2018-05-31 10:01:24,899 INFO [Thread-9] RecvMsg [RecvMsg.java:119] com.guanghui.admonitor.backservice.ctrlcntmsg.recv.ChnlReplayAdClipMsg@299e592d[
+  taskId=0
+  channelPath=ts/zjws
+  startTime=1527715194000
+  endTime=1527719994000
+  replayAdClips=[com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AdClipReplay@2feafc4f, com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AdClipReplay@10a57f14, com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AdClipReplay@2accc12d, com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AdClipReplay@71c0a268, com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AdClipReplay@930209b, com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AdClipReplay@32d6b376]
+  startTimeLong=1527715194000
+  endTimeLong=1527719994000
+]
+2018-05-31 10:01:24,900 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:77] recv from monitor 4000, data:{
+   "channelPath" : "ts/zjws",
+   "endTime" : "1527719994000",
+   "replayAdClips" : [
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 3,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715447280"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 2,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715447400"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 4,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715449880"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 4,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715450040"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 8,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715450200"
+      },
+      {
+         "adClipFrameNr" : 1001,
+         "adUrl" : "ts/zjws/refclips/2018_04_31_05_24_10__2018_04_31_05_24_50:00_v.ts.ftr",
+         "adoffset" : 0,
+         "matchFrameNr" : 2,
+         "nasInfo" : "",
+         "startMatchChannelTime" : "1527715670040"
+      }
+   ],
+   "startTime" : "1527715194000",
+   "taskId" : 0
+}
+, response
+2018-05-31 10:01:24,900 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:93] sendresponse:monitor_id=4000,dataid=100,data='{"code":0,"info":"ok"}'
+2018-05-31 10:01:24,904 INFO [Thread-6] DataMonitor2CntServSockGroup [DataMonitor2CntServSockGroup.java:37] find match sock, send response data
+2018-05-31 10:01:24,904 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:99] before synchronize monitornifo
+2018-05-31 10:01:24,904 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:107] dataState READ_RCVED_DATA to RESPONSE_TO_SEND
+2018-05-31 10:01:24,904 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:111] after synchronize monitornifo
+2018-05-31 10:01:24,904 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:122] sendResponse called.
+2018-05-31 10:01:24,905 INFO [Thread-6] DataMonitor2CntAppServSock [DataMonitor2CntAppServSock.java:130] sent response data
+

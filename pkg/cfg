@@ -1,0 +1,7 @@
+{
+    "addMsg":[{
+        "maskid":1,
+        "calPath":"/home/cjs/ts/jsws/",
+        "masks":[{"topLeftX":1,"topLeftY":1, "w":2, "h":2}]
+        }]
+}
