@@ -42,7 +42,7 @@ public class MsgProcess implements MsgProcessSurface {
     public UserProductInfo getUserProductInfo(int ownerid){return h2Db.getUserProductInfo(ownerid);}
 
     @Override
-    public CommonResponse AddAdRecordInfo(){
+    public CommonResponse addAdRecordInfo(){
 
         return null;
     }

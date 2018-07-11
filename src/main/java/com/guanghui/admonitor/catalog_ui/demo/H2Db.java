@@ -28,18 +28,24 @@ public class H2Db {
                 System.out.println("init h2 success");
 
                 String driver = "com.mysql.cj.jdbc.Driver";
-                String url = "jdbc:mysql://localhost:3306/ad?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8 ";
+                String url = "jdbc:mysql://localhost:3306/ads?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8 ";
                 String user = "root";
                 String password = "root";
                 Class.forName(driver);
                 conn2 = DriverManager.getConnection(url,user,password);
                 //if(!conn2.isClosed())
-                //    System.out.println("Succeeded connecting to the MySql Database!");
+                //sout
+                ReqChannelMatchMsg rsq = new ReqChannelMatchMsg();
+                rsq.channelid = 17;
+                rsq.startTime = 1527715447280L;
+                rsq.endTime = 1527715670040L;
+
 
             
 
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 logger.error("database doset not exist: {} ", ExceptionUtils.getStackTrace(e));
+                e.printStackTrace();
                 //connection = DriverManager.getConnection(dburl, "sa", "cjs567");
 
                 connection = DriverManager.getConnection(dburl, dbusr, dbpasswd);
@@ -154,6 +160,8 @@ public class H2Db {
             stmt.executeUpdate(crtMaskRect);
             stmt.executeUpdate(createAdClipSql);
             stmt.executeUpdate(crtChannelMaskSql);
+
+
         } catch (SQLException e) {
             logger.error(ExceptionUtils.getStackTrace(e));
         }
@@ -228,21 +236,26 @@ public class H2Db {
     }
 
     public synchronized ChannelMatchMsg getChannelMatch(ReqChannelMatchMsg reqMsg){
-        String sql = "select * from adMatchRresult where channelId = ? and startTime between ? and ?";
+        //?+8h后可能调整
+        String sql = "select * from adclipinfo_tab where own_channelid = ? and unix_timestamp(start_time)*1000+8*3600000 between ? and ?";
         ChannelMatchMsg res = new ChannelMatchMsg();
         try{
-            PreparedStatement statement = connection.prepareStatement(sql);
+            PreparedStatement statement = conn2.prepareStatement(sql);
             statement.setInt(1, reqMsg.channelid);
             //要改成2002-01-29 04:33:38.531格式字符串时间
-            statement.setTimestamp(2, Timestamp.valueOf(TimeTransform.timeStamp2Date(Long.toString(reqMsg.startTime))));
-            statement.setTimestamp(3, Timestamp.valueOf(TimeTransform.timeStamp2Date(Long.toString(reqMsg.endTime))));
+            statement.setLong(2, reqMsg.startTime);
+            statement.setLong(3, reqMsg.endTime);
+            System.out.println("select * from adclipinfo_tab where own_channelid = "+reqMsg.channelid+" and start_time between '"+reqMsg.startTime+"' and '"+reqMsg.endTime+"'");
             ResultSet rs = statement.executeQuery();
             while(rs.next()){
                 MatchItem ma = new MatchItem();
-                ma.refurl = rs.getString("mediaFile");
-                ma.startTime = TimeTransform.Date2UnixStamp((rs.getTimestamp("startTime")).toString());
-                ma.endTime =  TimeTransform.Date2UnixStamp((rs.getTimestamp("endTime")).toString());
+                ma.channelid = rs.getInt("own_channelid");
+                ma.refurl = rs.getString("url");
+                ma.startTime = TimeTransform.Date2UnixStamp((rs.getTimestamp("start_time")).toString());
+                ma.frameNr =  rs.getInt("frame_nr");
                 res.matchItems.add(ma);
+                System.out.println("match");
+                System.out.println("match:"+rs.getInt("clipid")+" "+ma.startTime);
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -312,7 +325,7 @@ public class H2Db {
             PreparedStatement statement = connection.prepareStatement(getLevelClassItemSql);
             statement.setInt(1, level);
             statement.setInt(2, parentid);
-            statement.setBoolean(3, true);
+            statement.setInt(3, 1);
             ResultSet rs = statement.executeQuery();
             while(rs.next()) {
                 ClassItemWithParentID ci = new ClassItemWithParentID();

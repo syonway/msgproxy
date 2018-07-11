@@ -8,5 +8,5 @@ import java.util.LinkedList;
 public class RefAdClips {
     public String nasIp;
     //public String channelPath;
-    public LinkedList<String> adClipUrls;
+    public LinkedList<String> adClipUrls = new LinkedList<>();
 }

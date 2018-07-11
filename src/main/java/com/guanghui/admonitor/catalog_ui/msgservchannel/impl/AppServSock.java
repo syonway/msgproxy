@@ -230,7 +230,7 @@ import java.nio.channels.SocketChannel;
             return getReqMsgFormaterror();
         }
 
-       // CommonResponse response = msgProcesser.addAdRecordInfo();
+        CommonResponse response = msgProcesser.addAdRecordInfo();
 
         return null;
     }

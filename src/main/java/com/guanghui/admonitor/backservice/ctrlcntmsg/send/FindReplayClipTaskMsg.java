@@ -8,14 +8,14 @@ import java.util.LinkedList;
  * Created by cuiju on 2017/2/13. 18 04
  */
 public class FindReplayClipTaskMsg {
-    public int taskId;
+    public int taskId =100;
     public String channelPath;
     public String nasIp;
     public String startTime;
     public String endTime;
-    public double threshold;
+    public double threshold = 0.9;
 
-    public LinkedList<RefAdClips> refAdClips;
+    public LinkedList<RefAdClips> refAdClips = new LinkedList<>();
 
     @JsonIgnore
     public long startTimeLong;

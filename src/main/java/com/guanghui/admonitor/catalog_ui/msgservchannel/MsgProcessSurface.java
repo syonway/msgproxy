@@ -12,7 +12,7 @@ public interface MsgProcessSurface {
     UserTaskInfo getUserTaskInfo(String userName);
     UserProductInfo getUserProductInfo(int ownerid);
     CommonResponse addAdClipInfo(AdClipInfo info, String username, SendMsg sendmsg);
-    CommonResponse AddAdRecordInfo();
+    CommonResponse addAdRecordInfo();
     AdClassfication getAdClassfication(String username);
     ChannelMatchMsg getChannelMatch(ReqChannelMatchMsg reqMsg, String username);
     AdOwnerInfo getAdOwnerInfo();

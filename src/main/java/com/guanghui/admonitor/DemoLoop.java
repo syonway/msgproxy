@@ -9,10 +9,7 @@ import com.guanghui.admonitor.backservice.ctrlcnt_demo.TestDataBase;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.CommonRespose;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.RecvTask;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.recv.AddDelRecvTaskResult;
-import com.guanghui.admonitor.backservice.ctrlcntmsg.send.CalTaskMsg;
-import com.guanghui.admonitor.backservice.ctrlcntmsg.send.CreateRefAdClip;
-import com.guanghui.admonitor.backservice.ctrlcntmsg.send.FindReplayClipTaskMsg;
-import com.guanghui.admonitor.backservice.ctrlcntmsg.send.RecvTasks;
+import com.guanghui.admonitor.backservice.ctrlcntmsg.send.*;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.send.response.CreateRefAdClipResponse;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.send.response.MonitorType;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.send.response.NasMountInfo;
@@ -20,6 +17,8 @@ import com.guanghui.admonitor.backservice.ctrlcntmsg.send.response.NasMountInfos
 import com.guanghui.admonitor.catalog_ui.demo.H2Db;
 import com.guanghui.admonitor.catalog_ui.demo.MsgProcess;
 import com.guanghui.admonitor.catalog_ui.msgservchannel.MsgChannelServer;
+import com.guanghui.admonitor.catalog_ui.msgservchannel.msgs.ChannelMatchMsg;
+import com.guanghui.admonitor.catalog_ui.msgservchannel.msgs.ReqChannelMatchMsg;
 import com.guanghui.itvm.dcbase.DataChannelMng;
 import com.guanghui.admonitor.syctrl.*;
 import org.apache.commons.io.FileUtils;
@@ -47,80 +46,23 @@ import org.json.JSONObject;
  */
 public class DemoLoop {
     public static void main(String[] args){
-        DemoLoop demoMain = new DemoLoop();
-        //demoMain.mainLoop(args);
-        demoMain.initService(args);
+        DemoLoop demoMain = DemoLoop.getInstance();
+        demoMain.mainLoop(args);
+      //  demoMain.initService(args);
     }
 
-    private void initService(String[] args) {
-        Cfg cfg = Cfg.getInstance();
-        if (args.length < 1) {
-            System.out.println("paramete: cfgfile");
-        }
-
-        /**
-         try {
-         Thread logthread = new Thread(new logThread());
-         logthread.start();
-
-         }catch (Exception e){
-         e.printStackTrace();
-         }**/
-
-        ////for catalog ui msgproxy demo start
-        DemoLoop backEndServiceDemo = new DemoLoop();
-        String bindip = "0.0.0.0";
-        int port = cfg.getCatalogUiListenPort();
-        int dataWebPort = cfg.getDbWebPort();
-        backEndServiceDemo.startDb(dataWebPort, cfg.getDatabaseUrl(), cfg.getDbDriver(),
-                cfg.getDbuser(), cfg.getDbPasswd());
-        backEndServiceDemo.startMsgServer(bindip, port);
-        ////for catalog ui msgproxy demo end
-
-        ////for backservice demo start
-        TestDataBase testDataBase = TestDataBase.getIns();
-        testDataBase.connet2Db(cfg.getDatabaseUrl(), cfg.getDbuser(), cfg.getDbPasswd());
-        dataChannelMng = new DataChannelMng();
-        dataChannelMng.startCnt2Monitor("0.0.0.0", cfg.getServCnt2MonitorPort());
-        dataChannelMng.startMonitor2Cnt("0.0.0.0", cfg.getServMonitor2CntPort(), new RecvMsg());
-        Thread sendProcessthread = new Thread(new ProcessTaskTask(dataChannelMng));
-        sendMsg = new SendMsg(dataChannelMng);
-        sendProcessthread.setDaemon(true);
-        ///for backservice demo end
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while (true) {
-            try {
-                //  String ress = sendmsg(new String[]{"send","add_calfeaturetask","2000","testjson\\caltask.json"});
-                System.out.print("cmd>");
-                String line = reader.readLine();
-                /** System.out.println("try : ");
-                 String tsr2 = sendmsg(new String[]{"send","del_calfeaturetask","2002","testjson\\caltask.json"});
-                 String tsr = sendmsg(new String[]{"send","add_calfeaturetask","2002","testjson\\caltask.json"});
-                 String tsr3 = sendmsg(new String[]{"send","add_calfeaturetask","2002","testjson\\caltask.json"});
-                 System.out.println(tsr2+" "+tsr+" "+tsr3);
-                 **/
-                DemoMain dm1 = new DemoMain();
-                dm1.commandProcess(line);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+    private static DemoLoop demoLoop = new DemoLoop();
+    public static DemoLoop getInstance(){
+        return demoLoop;
     }
+
+
     @SuppressWarnings("InfiniteLoopStatement")
     private void mainLoop(String[] args){
         Cfg cfg = Cfg.getInstance();
         if (args.length < 1){
             System.out.println("paramete: cfgfile");
         }
-
-        /**
-       try {
-            Thread logthread = new Thread(new logThread());
-            logthread.start();
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }**/
 
         ////for catalog ui msgproxy demo start
         DemoLoop backEndServiceDemo = new DemoLoop();
@@ -148,12 +90,7 @@ public class DemoLoop {
               //  String ress = sendmsg(new String[]{"send","add_calfeaturetask","2000","testjson\\caltask.json"});
                 System.out.print("cmd>");
                 String line = reader.readLine();
-               /** System.out.println("try : ");
-                String tsr2 = sendmsg(new String[]{"send","del_calfeaturetask","2002","testjson\\caltask.json"});
-                String tsr = sendmsg(new String[]{"send","add_calfeaturetask","2002","testjson\\caltask.json"});
-                String tsr3 = sendmsg(new String[]{"send","add_calfeaturetask","2002","testjson\\caltask.json"});
-                System.out.println(tsr2+" "+tsr+" "+tsr3);
-                **/
+
                 DemoMain dm1 = new DemoMain();
                 dm1.commandProcess(line);
 
@@ -182,37 +119,43 @@ public class DemoLoop {
                 //连接数据库
                 Connection con;
                 String driver = "com.mysql.cj.jdbc.Driver";
-                String url = "jdbc:mysql://localhost:3306/adinfo?serverTimezone=UTC";
+                String url = "jdbc:mysql://115.28.61.129:3306/syads?serverTimezone=UTC";
                 String user = "root";
-                String password = "root";
+                String password = "123456";
                 Class.forName(driver);
                 con = DriverManager.getConnection(url,user,password);
                 if(!con.isClosed())
                     System.out.println("Succeeded connecting to the Database!");
                 Statement statement = con.createStatement();
 
+
+
                 //插入新建monitor
-                String sqlm = "select * FROM monitor where id =  ";
+                String sqlm = "select type,count(*) totalCount FROM monitor where id =  ";
                 String sqlm2 = "INSERT INTO monitor (id,type,ip) VALUES (?,?,?) ";
                 //PreparedStatement pstatement1 = con.prepareStatement(sqlm);
                 for(int i=0;i<monitorlist.length;i++){
                     ResultSet rs = statement.executeQuery(sqlm+monitorlist[i]);
-                    if(!rs.next()){
-                        JSONObject typers = new JSONObject(getmsg(new String[]{"get","monitortype",monitorlist[i]}));
-                        String type = typers.getString("type");
-                        String[] ipadd = StringUtils.substringsBetween(typers.get("hostIps").toString(),"\",\"","\"]");
-                        System.out.println(typers.get("hostIps").toString());
-                        //re = statement.executeUpdate(sqlm2);
-                        PreparedStatement pstatement12 = con.prepareStatement(sqlm2);
-                        pstatement12.setInt(1, Integer.parseInt(monitorlist[i]));
-                        pstatement12.setString(2,type);
-                        pstatement12.setString(3,ipadd[0]);
-                        int rs2 = pstatement12.executeUpdate();
+                    if(rs.next()){
+                        if(rs.getInt("totalCount")==0) {
+
+                            JSONObject typers = new JSONObject(getmsg(new String[]{"get", "monitortype", monitorlist[i]}));
+                            String type = typers.getString("type");
+                            String[] ipadd = StringUtils.substringsBetween(typers.get("hostIps").toString(), "\",\"", "\"]");
+                            System.out.println(typers.get("hostIps").toString());
+                            //re = statement.executeUpdate(sqlm2);
+                            PreparedStatement pstatement12 = con.prepareStatement(sqlm2);
+                            pstatement12.setInt(1, Integer.parseInt(monitorlist[i]));
+                            pstatement12.setString(2, type);
+                            pstatement12.setString(3, ipadd[0]);
+                            int rs2 = pstatement12.executeUpdate();
+                        }
                     }
 
                 }
 
 
+                monitorlist = new String[]{"4000","4001","4002"};
                 //获取四种空monitor
                 String queryEmptyMonitor = "SELECT * FROM monitor WHERE task=0 ";
                 ResultSet rsEMmonitor = statement.executeQuery(queryEmptyMonitor);
@@ -255,12 +198,13 @@ public class DemoLoop {
                 }
 
                 //获取channelname
-                String queryChannel = "SELECT name FROM channel";
-                ResultSet rschannel = statement.executeQuery(queryChannel);
+                String sqlmc = "select * FROM channelinfo";
+                ResultSet channelrs = statement.executeQuery(sqlmc);
                 List<String> channellist = new ArrayList<>();
-                while (rschannel.next()){
-                    channellist.add(rschannel.getString("name"));
+                while (channelrs.next()){
+                    channellist.add(channelrs.getString("name"));
                 }
+
 
                 //获取运行任务monitor信息
                 String queryTaskMonitor = "SELECT * FROM monitor WHERE task=1";
@@ -318,7 +262,7 @@ public class DemoLoop {
                 JSONObject rectask=new JSONObject(recontent);
                 JSONObject caltask=new JSONObject(cacontent);
                 JSONObject cretask=new JSONObject(crcontent);
-                JSONObject matask=new JSONObject(macontent);
+                FindReplayClipTaskMsg matask=new FindReplayClipTaskMsg();
                // BufferedWriter output2 = new BufferedWriter(new FileWriter(calf));
                // BufferedWriter output3 = new BufferedWriter(new FileWriter(createf));
                // BufferedWriter output4 = new BufferedWriter(new FileWriter(matchf));
@@ -383,6 +327,7 @@ public class DemoLoop {
                         }
                     }
                 }
+
                 for(int i=0;i<channelMatch.length;i++){
                     int moid;
                     if(channelMatch[i][2]!=1){
@@ -391,12 +336,61 @@ public class DemoLoop {
                             break;
                         }
                         moid = matchMonitorlist.get(0).getMonitorid();
-                        matask.put("channelPath","ts/"+channellist.get(i));
+                        matask.channelPath = "ts/"+channellist.get(i);
+                        String getRefSql = "SELECT *  FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
+                        String getRefUrl = "SELECT DISTINCT url FROM adinfo";
+                        String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
+                        PreparedStatement refstatement= con.prepareStatement(getRefSql);
+                        PreparedStatement refnum = con.prepareStatement(getRefNumOfNasIp);
+                        ResultSet urlrs = statement.executeQuery(getRefUrl);
+                        List<String> urllist = new ArrayList<String>();
+
+                        int urltotalnum = 0;
+
+                        while (urlrs.next()){
+                            urllist.add(urlrs.getString("url"));
+                        }
+                        for(int n=0;n<urllist.size();n++){
+                            RefAdClips ref = new RefAdClips();
+                            ref.nasIp = urllist.get(n);
+                            refstatement.setString(1,urllist.get(n));
+                            refnum.setString(1,urllist.get(n));
+                            ResultSet refrs = refstatement.executeQuery();
+                            ResultSet refnumrs = refnum.executeQuery();
+                            int num = 0;
+                            while(refnumrs.next()) {
+                                num = refnumrs.getInt("cou");
+                            }
+                            urltotalnum += num;
+                            while(refrs.next()){
+                                String chan = channellist.get(i);
+                                if(num>0) {
+                                   // String mn2 = refrs.getString("lambdaFile");
+                                    String u = refrs.getString("url");
+
+                                    ref.adClipUrls.add(refrs.getString("lambdaFile"));
+                                }
+                            }
+                            matask.refAdClips.add(ref);
+                        }
+                        String getRecordIp = "SELECT pathIp from channel_tab WHERE name = '"+channellist.get(i)+"'";
+                        ResultSet recordIprs = statement.executeQuery(getRecordIp);
+                        if(recordIprs.next())
+                            matask.nasIp = recordIprs.getString("pathIp");
+                        matask.startTime =  Long.toString(System.currentTimeMillis());
+                        matask.endTime = Long.toString(Long.parseLong(matask.startTime)+3600000);
+                        if(urltotalnum==0)
+                            System.out.println(channellist.get(i)+" has no ref");
+                        String mtask = (new ObjectMapper()).writeValueAsString(matask);
+
+
+
                         BufferedWriter output3 = new BufferedWriter(new FileWriter(matchf));
-                        output3.write(matask.toString());
+                        output3.write(mtask);
                         output3.close();
                         String res3 = sendmsg(new String[]{"send","matchadreplaytask",Integer
                                 .toString(moid),"testjson\\findreplayclip.json"});
+
                         if((new JSONObject(res3)).getInt("code")==0){
                             String updateTask4 = "UPDATE monitor SET task=1,task_on='"+channellist.get(i)+"',task_plan='"+channellist.get(i)+"' WHERE id="+moid;
                             String getAdRefUrl = "SELECT  * FROM channel_tab WHERE name = '"+channellist.get(i)+"'";
@@ -443,6 +437,7 @@ public class DemoLoop {
                                 System.out.println(id+" stop");
                             break;
                         case "matchclip":
+                            /**
                             //?match是一直运行吗？
                             promap.put("channelPath","/ts/"+mtask);
                             ChangeFileData("testjson\\findreplayclip.json",promap);
@@ -451,7 +446,7 @@ public class DemoLoop {
                                 String monitorWrong = "UPDATE monitor SET task=1,task_on='wrong' WHERE id="+id;
                                 statement.executeUpdate(monitorWrong);
                             }
-                            else System.out.println(id+" stop");
+                            else System.out.println(id+" stop");**/
                             break;
 
                     }
@@ -666,11 +661,21 @@ public class DemoLoop {
 
     private DataChannelMng dataChannelMng;
     private SendMsg sendMsg;
+    public SendMsg getSendMsg(){
+        return this.sendMsg;
+    }
     private MsgProcess msgProcess = new MsgProcess();
     private void startDb(int weport, String dburl, String dbDriver, String usr, String passwd){
         H2Db db = new H2Db();
         msgProcess.h2Db = db;
         db.startDb(weport, dburl, dbDriver, usr, passwd);
+
+/**        ReqChannelMatchMsg rsq = new ReqChannelMatchMsg();
+        rsq.channelid = 17;
+        rsq.startTime = 1527715447280L;
+        rsq.endTime = 1527715670040L;
+        ChannelMatchMsg rs = db.getChannelMatch(rsq);
+   **/
     }
     private void startMsgServer(String bindip, int port){
         MsgChannelServer msgChannelServer = new MsgChannelServer(bindip, port, msgProcess);

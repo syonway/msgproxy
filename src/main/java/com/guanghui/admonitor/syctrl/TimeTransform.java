@@ -31,7 +31,7 @@ public class TimeTransform {
 
     public static String timeStamp2Date(String timestampString){
         String format = "yyyy-MM-dd HH:mm:ss.SSS";
-        Long timestamp = Long.parseLong(timestampString)*1000;
+        Long timestamp = Long.parseLong(timestampString);
         String date = new java.text.SimpleDateFormat(format).format(new java.util.Date(timestamp));
         return date;
     }
