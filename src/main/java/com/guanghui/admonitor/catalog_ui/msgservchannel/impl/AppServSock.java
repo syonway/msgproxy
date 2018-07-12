@@ -67,7 +67,7 @@ import java.nio.channels.SocketChannel;
                 dataidBuf.flip();
                 dataid = dataidBuf.getInt();
                 logger.info("get dataid = {}", dataid);
-                System.out.println("dataid: "+dataid);
+                
                 int msglen = len - INT_LEN;
                 byte[] token = null;
                 if (dataid != REQ_USER_LOGIN_MSG){
@@ -133,6 +133,7 @@ import java.nio.channels.SocketChannel;
         final int REQ_AD_OWNERS_MSG = 400;
         final int REQ_ADD_AD_RECORD_MSG = 204;
         byte[] res = null;
+        System.out.println("dataid: "+dataid);
         switch (dataid){
             case REQ_AD_CLASSFICATION_MSG:
                 res = getAdClassfication(token);

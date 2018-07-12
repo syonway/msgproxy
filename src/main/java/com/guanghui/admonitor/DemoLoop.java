@@ -56,6 +56,23 @@ public class DemoLoop {
         return demoLoop;
     }
 
+    private Connection con;
+    private Statement statement;
+    private void connSql(){
+        String driver = "com.mysql.cj.jdbc.Driver";
+        String url = "jdbc:mysql://115.28.61.129:3306/syads?serverTimezone=UTC";
+        String user = "root";
+        String password = "123456";
+        Class.forName(driver);
+        con = DriverManager.getConnection(url,user,password);
+        if(!con.isClosed())
+            System.out.println("Succeeded connecting to the Database!");
+        statement = con.createStatement();
+    }
+    
+    public Connection getConnection(){
+        return DemoLoop.getInstance().con;
+    }
 
     @SuppressWarnings("InfiniteLoopStatement")
     private void mainLoop(String[] args){
@@ -64,6 +81,7 @@ public class DemoLoop {
             System.out.println("paramete: cfgfile");
         }
 
+        connSql();;
         ////for catalog ui msgproxy demo start
         DemoLoop backEndServiceDemo = new DemoLoop();
         String bindip = "0.0.0.0";
@@ -116,17 +134,7 @@ public class DemoLoop {
                 for(int i=0;i<monitorlist.length;i++) System.out.print(monitorlist[i]+" ");
                 System.out.println("ml:"+monitorlist.length);
 
-                //连接数据库
-                Connection con;
-                String driver = "com.mysql.cj.jdbc.Driver";
-                String url = "jdbc:mysql://115.28.61.129:3306/syads?serverTimezone=UTC";
-                String user = "root";
-                String password = "123456";
-                Class.forName(driver);
-                con = DriverManager.getConnection(url,user,password);
-                if(!con.isClosed())
-                    System.out.println("Succeeded connecting to the Database!");
-                Statement statement = con.createStatement();
+            
 
 
 
@@ -263,7 +271,8 @@ public class DemoLoop {
                 JSONObject caltask=new JSONObject(cacontent);
                 JSONObject cretask=new JSONObject(crcontent);
                 FindReplayClipTaskMsg matask=new FindReplayClipTaskMsg();
-               // BufferedWriter output2 = new BufferedWriter(new FileWriter(calf));
+               
+                // BufferedWriter output2 = new BufferedWriter(new FileWriter(calf));
                // BufferedWriter output3 = new BufferedWriter(new FileWriter(createf));
                // BufferedWriter output4 = new BufferedWriter(new FileWriter(matchf));
 
@@ -338,7 +347,7 @@ public class DemoLoop {
                         moid = matchMonitorlist.get(0).getMonitorid();
                         matask.channelPath = "ts/"+channellist.get(i);
                         String getRefSql = "SELECT *  FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
-                        String getRefUrl = "SELECT DISTINCT url FROM adinfo";
+                        String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'"";
                         String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
                         PreparedStatement refstatement= con.prepareStatement(getRefSql);
                         PreparedStatement refnum = con.prepareStatement(getRefNumOfNasIp);
