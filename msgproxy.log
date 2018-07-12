@@ -1679,3 +1679,633 @@ send to monitor 4001, data:{"taskId":100,"channelPath":"ts/中央9套","nasIp":"
 2018-07-11 15:17:04,517 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
 2018-07-11 15:17:04,518 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:44598) authen ok 
 2018-07-11 15:17:04,518 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:44598) auhentic ok
+2018-07-12 15:42:00,091 DEBUG [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:42] TvmEventAppServSockGroup thread start
+2018-07-12 15:42:00,091 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:35] max stor = 100
+2018-07-12 15:42:00,552 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59176
+2018-07-12 15:42:00,569 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ccbeb4f15236ed834cfbb35b87de283c
+2018-07-12 15:42:00,638 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4004 authen ok.
+2018-07-12 15:42:00,639 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59176) authen ok 
+2018-07-12 15:42:00,644 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59176
+2018-07-12 15:42:01,719 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59178
+2018-07-12 15:42:01,719 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53510
+2018-07-12 15:42:01,720 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=6c2e547d9a09a3d3979b60ff6fce1518
+2018-07-12 15:42:01,720 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=0db37d3c11347106fab7982edef95ea4
+2018-07-12 15:42:01,721 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59180
+2018-07-12 15:42:01,721 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53512
+2018-07-12 15:42:01,722 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=e597fe68765df0a6a684bf38d897472c
+2018-07-12 15:42:01,722 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=a2802dc16aaa10ef6d535fbb117affae
+2018-07-12 15:42:01,722 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3001 authen ok.
+2018-07-12 15:42:01,722 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59182
+2018-07-12 15:42:01,723 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53510) authen ok 
+2018-07-12 15:42:01,723 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53516
+2018-07-12 15:42:01,724 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=65f53f1bb35ccdd081677847749f8c9f
+2018-07-12 15:42:01,724 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=c9626f9ee5d47f68135a6f831e173026
+2018-07-12 15:42:01,725 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1002 authen ok.
+2018-07-12 15:42:01,725 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59178) authen ok 
+2018-07-12 15:42:01,725 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59178
+2018-07-12 15:42:01,726 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-07-12 15:42:01,727 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53510) auhentic ok
+2018-07-12 15:42:01,727 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59182) authen ok 
+2018-07-12 15:42:01,727 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53514
+2018-07-12 15:42:01,727 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4002 authen ok.
+2018-07-12 15:42:01,727 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59180) authen ok 
+2018-07-12 15:42:01,727 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59184
+2018-07-12 15:42:01,728 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=90275719c12f58b5629058034d5872d6
+2018-07-12 15:42:01,734 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-07-12 15:42:01,734 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53512) authen ok 
+2018-07-12 15:42:01,735 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ea32c8aadfb8005f0f3c31155e1d2178
+2018-07-12 15:42:01,735 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4001 authen ok.
+2018-07-12 15:42:01,735 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53516) authen ok 
+2018-07-12 15:42:01,735 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59180
+2018-07-12 15:42:01,736 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59182
+2018-07-12 15:42:01,736 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53512) auhentic ok
+2018-07-12 15:42:01,736 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53516) auhentic ok
+2018-07-12 15:42:01,736 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59196
+2018-07-12 15:42:01,736 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4003 authen ok.
+2018-07-12 15:42:01,736 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53514) authen ok 
+2018-07-12 15:42:01,737 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53518
+2018-07-12 15:42:01,737 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=2966a7ded14dd1fb6e52487302deefa4
+2018-07-12 15:42:01,737 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=fa73f4dad3d9c217c4b8924c46baa03f
+2018-07-12 15:42:01,738 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53514) auhentic ok
+2018-07-12 15:42:01,738 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2001 authen ok.
+2018-07-12 15:42:01,738 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59184) authen ok 
+2018-07-12 15:42:01,738 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59200
+2018-07-12 15:42:01,739 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53522
+2018-07-12 15:42:01,740 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=5ecd4ae7e63c851c549ab491aa0d9960
+2018-07-12 15:42:01,740 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ead2c6d60a934e0a6ca012c6d4e7d0d2
+2018-07-12 15:42:01,745 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3002 authen ok.
+2018-07-12 15:42:01,745 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59184
+2018-07-12 15:42:01,746 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53518) authen ok 
+2018-07-12 15:42:01,746 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53526
+2018-07-12 15:42:01,746 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-07-12 15:42:01,746 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59196) authen ok 
+2018-07-12 15:42:01,746 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59204
+2018-07-12 15:42:01,747 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=757965695c0ea77e13e09b84ba5c1d62
+2018-07-12 15:42:01,747 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=fa92e4991f0535d22309eaf443359376
+2018-07-12 15:42:01,747 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53518) auhentic ok
+2018-07-12 15:42:01,747 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59196
+2018-07-12 15:42:01,748 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1002 authen ok.
+2018-07-12 15:42:01,748 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2002 authen ok.
+2018-07-12 15:42:01,749 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53522) authen ok 
+2018-07-12 15:42:01,749 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59204) authen ok 
+2018-07-12 15:42:01,749 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4004 authen ok.
+2018-07-12 15:42:01,749 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53526) authen ok 
+2018-07-12 15:42:01,749 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3002 authen ok.
+2018-07-12 15:42:01,749 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53532
+2018-07-12 15:42:01,749 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59200) authen ok 
+2018-07-12 15:42:01,750 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=86a75db6aacd300d40f6bdad38ae7759
+2018-07-12 15:42:01,750 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59206
+2018-07-12 15:42:01,752 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=7d8ebb98eaea36d96f9c9aaa2ca8c3a5
+2018-07-12 15:42:01,752 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53522) auhentic ok
+2018-07-12 15:42:01,752 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53526) auhentic ok
+2018-07-12 15:42:01,752 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59200
+2018-07-12 15:42:01,753 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59204
+2018-07-12 15:42:01,753 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59212
+2018-07-12 15:42:01,753 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-07-12 15:42:01,753 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53532) authen ok 
+2018-07-12 15:42:01,753 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53534
+2018-07-12 15:42:01,753 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=7adaf392979700aaff37bfef0a50b7ca
+2018-07-12 15:42:01,754 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-07-12 15:42:01,754 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=c4eb90963291496b3297ad63633720f6
+2018-07-12 15:42:01,754 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59206) authen ok 
+2018-07-12 15:42:01,755 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59214
+2018-07-12 15:42:01,755 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53532) auhentic ok
+2018-07-12 15:42:01,755 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53540
+2018-07-12 15:42:01,755 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=d6eab131314d12cb8dd9d91bc6548926
+2018-07-12 15:42:01,755 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59206
+2018-07-12 15:42:01,756 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=fc88242097cff4658effdf2f493e9c60
+2018-07-12 15:42:01,756 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-07-12 15:42:01,756 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59212) authen ok 
+2018-07-12 15:42:01,756 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59226
+2018-07-12 15:42:01,756 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53542
+2018-07-12 15:42:01,757 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=93c27873329308df69b07979385cec17
+2018-07-12 15:42:01,758 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59212
+2018-07-12 15:42:01,758 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3001 authen ok.
+2018-07-12 15:42:01,759 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59226) authen ok 
+2018-07-12 15:42:01,759 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4003 authen ok.
+2018-07-12 15:42:01,759 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59214) authen ok 
+2018-07-12 15:42:01,759 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59214
+2018-07-12 15:42:01,759 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59226
+2018-07-12 15:42:01,759 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=e3dfe731d6bdf474c7281fd492a6a122
+2018-07-12 15:42:01,760 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4002 authen ok.
+2018-07-12 15:42:01,760 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53534) authen ok 
+2018-07-12 15:42:01,760 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53534) auhentic ok
+2018-07-12 15:42:01,760 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53544
+2018-07-12 15:42:01,761 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=5c9e4ceda3c7b074a41b62726937671f
+2018-07-12 15:42:01,761 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2001 authen ok.
+2018-07-12 15:42:01,761 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53540) authen ok 
+2018-07-12 15:42:01,761 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53540) auhentic ok
+2018-07-12 15:42:01,761 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2002 authen ok.
+2018-07-12 15:42:01,761 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53544) authen ok 
+2018-07-12 15:42:01,762 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-07-12 15:42:01,762 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53542) authen ok 
+2018-07-12 15:42:01,762 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53546
+2018-07-12 15:42:01,763 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=ab26e91186bfcebd6d6ab59c23f6df06
+2018-07-12 15:42:01,764 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53542) auhentic ok
+2018-07-12 15:42:01,764 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53544) auhentic ok
+2018-07-12 15:42:01,764 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:53548
+2018-07-12 15:42:01,765 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=d86354f3ce6725ea3db6be6ffa86434b
+2018-07-12 15:42:01,766 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-07-12 15:42:01,766 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53546) authen ok 
+2018-07-12 15:42:01,770 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53546) auhentic ok
+2018-07-12 15:42:01,771 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1001 authen ok.
+2018-07-12 15:42:01,772 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:53548) authen ok 
+2018-07-12 15:42:01,772 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:53548) auhentic ok
+2018-07-12 15:42:02,225 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59228
+2018-07-12 15:42:02,229 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=93ffc22e5f85e58dc8de25fcfec848a9
+2018-07-12 15:42:02,230 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:59230
+2018-07-12 15:42:02,232 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ad03cc51efb7a9428a0b3448350d4c44
+2018-07-12 15:42:02,233 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4001 authen ok.
+2018-07-12 15:42:02,233 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59228) authen ok 
+2018-07-12 15:42:02,233 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59228
+2018-07-12 15:42:02,235 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1001 authen ok.
+2018-07-12 15:42:02,235 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:59230) authen ok 
+2018-07-12 15:42:02,236 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:59230
+2018-07-12 15:43:11,165 DEBUG [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:42] TvmEventAppServSockGroup thread start
+2018-07-12 15:43:11,187 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:35] max stor = 100
+2018-07-12 15:43:11,670 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54848
+2018-07-12 15:43:11,675 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=e3435402914962e306d66e119e9a1cfa
+2018-07-12 15:43:11,676 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54850
+2018-07-12 15:43:11,677 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=96a86ea858a79da7fcec3199d1d4def7
+2018-07-12 15:43:11,726 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3002 authen ok.
+2018-07-12 15:43:11,727 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54848) authen ok 
+2018-07-12 15:43:11,727 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54852
+2018-07-12 15:43:11,728 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=abb95fa754adfe229b5b69719b21a0bf
+2018-07-12 15:43:11,731 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54848) auhentic ok
+2018-07-12 15:43:11,733 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2001 authen ok.
+2018-07-12 15:43:11,733 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54850) authen ok 
+2018-07-12 15:43:11,734 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3001 authen ok.
+2018-07-12 15:43:11,734 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54852) authen ok 
+2018-07-12 15:43:11,735 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54860
+2018-07-12 15:43:11,742 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=5529debeb13420e7ab6d66f2ca1de1b8
+2018-07-12 15:43:11,743 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54850) auhentic ok
+2018-07-12 15:43:11,743 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54852) auhentic ok
+2018-07-12 15:43:11,743 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54862
+2018-07-12 15:43:11,747 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=9b13b6803a9114083b5dad5bbadf85c5
+2018-07-12 15:43:11,748 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-07-12 15:43:11,749 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54860) authen ok 
+2018-07-12 15:43:11,749 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54864
+2018-07-12 15:43:11,753 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=e2bae886ff51b65c3431a7434dc53ca3
+2018-07-12 15:43:11,754 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54860) auhentic ok
+2018-07-12 15:43:11,754 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1001 authen ok.
+2018-07-12 15:43:11,754 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54862) authen ok 
+2018-07-12 15:43:11,756 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54866
+2018-07-12 15:43:11,758 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=4e40260a9a6d9dde13a66b829e12b8a2
+2018-07-12 15:43:11,758 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54862) auhentic ok
+2018-07-12 15:43:11,760 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2002 authen ok.
+2018-07-12 15:43:11,762 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54864) authen ok 
+2018-07-12 15:43:11,762 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54868
+2018-07-12 15:43:11,770 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=3b175bebb0d89be6aead97f0cd806d2b
+2018-07-12 15:43:11,771 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54864) auhentic ok
+2018-07-12 15:43:11,771 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4004 authen ok.
+2018-07-12 15:43:11,771 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54866) authen ok 
+2018-07-12 15:43:11,772 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54870
+2018-07-12 15:43:11,774 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=0a42efd23f5a20f8fbcd1883575f05e4
+2018-07-12 15:43:11,775 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54866) auhentic ok
+2018-07-12 15:43:11,776 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4003 authen ok.
+2018-07-12 15:43:11,776 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54868) authen ok 
+2018-07-12 15:43:11,776 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54872
+2018-07-12 15:43:11,777 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=d9503dc75c954c2ae82c694c840dc50e
+2018-07-12 15:43:11,778 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54868) auhentic ok
+2018-07-12 15:43:11,778 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-07-12 15:43:11,778 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54870) authen ok 
+2018-07-12 15:43:11,779 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54874
+2018-07-12 15:43:11,779 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=53e782ca67750d1ac05cc97b36257436
+2018-07-12 15:43:11,780 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54870) auhentic ok
+2018-07-12 15:43:11,780 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1002 authen ok.
+2018-07-12 15:43:11,780 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54872) authen ok 
+2018-07-12 15:43:11,780 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54876
+2018-07-12 15:43:11,781 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=70c603aed44bc6767d0f909a4728c37c
+2018-07-12 15:43:11,781 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54872) auhentic ok
+2018-07-12 15:43:11,781 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4001 authen ok.
+2018-07-12 15:43:11,781 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54874) authen ok 
+2018-07-12 15:43:11,782 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54878
+2018-07-12 15:43:11,782 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=43ba4fbc98aa34db6bf943ea413d750f
+2018-07-12 15:43:11,783 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54874) auhentic ok
+2018-07-12 15:43:11,785 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-07-12 15:43:11,785 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54876) authen ok 
+2018-07-12 15:43:11,785 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4002 authen ok.
+2018-07-12 15:43:11,788 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54878) authen ok 
+2018-07-12 15:43:11,789 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:54880
+2018-07-12 15:43:11,790 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=de799139c1754321183afee6042feea7
+2018-07-12 15:43:11,790 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54876) auhentic ok
+2018-07-12 15:43:11,790 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54878) auhentic ok
+2018-07-12 15:43:11,791 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-07-12 15:43:11,791 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:54880) authen ok 
+2018-07-12 15:43:11,791 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:54880) auhentic ok
+2018-07-12 15:43:12,744 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60558
+2018-07-12 15:43:12,745 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=9818c492ec1c20fe4d6cea331eca290a
+2018-07-12 15:43:12,745 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60560
+2018-07-12 15:43:12,746 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=8d123e0b523858c2b3e15280a537ca3a
+2018-07-12 15:43:12,746 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4002 authen ok.
+2018-07-12 15:43:12,746 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60558) authen ok 
+2018-07-12 15:43:12,748 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60558
+2018-07-12 15:43:12,749 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1002 authen ok.
+2018-07-12 15:43:12,749 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60560) authen ok 
+2018-07-12 15:43:12,749 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60560
+2018-07-12 15:43:12,749 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60562
+2018-07-12 15:43:12,750 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=b04325e6a9b29f206a617d813586df4d
+2018-07-12 15:43:12,751 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-07-12 15:43:12,751 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60562) authen ok 
+2018-07-12 15:43:12,751 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60562
+2018-07-12 15:43:12,753 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60564
+2018-07-12 15:43:12,754 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=0f0e839f8792bb7852b4c8b42d1672ba
+2018-07-12 15:43:12,755 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2001 authen ok.
+2018-07-12 15:43:12,755 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60564) authen ok 
+2018-07-12 15:43:12,755 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60564
+2018-07-12 15:43:12,757 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60566
+2018-07-12 15:43:12,757 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=aa5235a50e04543fc32b77726697d881
+2018-07-12 15:43:12,758 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-07-12 15:43:12,758 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60566) authen ok 
+2018-07-12 15:43:12,759 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60566
+2018-07-12 15:43:12,768 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60568
+2018-07-12 15:43:12,770 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=c5bf654d629640058882ca9c58ea5b8a
+2018-07-12 15:43:12,771 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60570
+2018-07-12 15:43:12,773 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=f9aabac1e5db62a94ae198644ff31983
+2018-07-12 15:43:12,773 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60572
+2018-07-12 15:43:12,774 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=f6d56fe3a178c3839b17fdc0a0f8e501
+2018-07-12 15:43:12,774 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2002 authen ok.
+2018-07-12 15:43:12,774 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60568) authen ok 
+2018-07-12 15:43:12,774 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60568
+2018-07-12 15:43:12,775 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60574
+2018-07-12 15:43:12,775 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=91e37a70810488593b0ff828cd17d636
+2018-07-12 15:43:12,776 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3002 authen ok.
+2018-07-12 15:43:12,776 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60570) authen ok 
+2018-07-12 15:43:12,776 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60570
+2018-07-12 15:43:12,777 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-07-12 15:43:12,778 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60572) authen ok 
+2018-07-12 15:43:12,778 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60572
+2018-07-12 15:43:12,778 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-07-12 15:43:12,778 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60574) authen ok 
+2018-07-12 15:43:12,778 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60574
+2018-07-12 15:43:12,779 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60576
+2018-07-12 15:43:12,779 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=87e186acfb70386ef0fb42e08a5129c4
+2018-07-12 15:43:12,779 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60578
+2018-07-12 15:43:12,780 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ef2fc83df0e7ef1620d2b6aeabcb67eb
+2018-07-12 15:43:12,781 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4003 authen ok.
+2018-07-12 15:43:12,781 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60576) authen ok 
+2018-07-12 15:43:12,781 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60576
+2018-07-12 15:43:12,781 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3001 authen ok.
+2018-07-12 15:43:12,781 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60578) authen ok 
+2018-07-12 15:43:12,782 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60578
+2018-07-12 15:43:13,253 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60580
+2018-07-12 15:43:13,255 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=7046d70eb46d1c0b45ee7084d0d647b1
+2018-07-12 15:43:13,257 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60582
+2018-07-12 15:43:13,258 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=14373fc620d72a459bd8da30ae21cce0
+2018-07-12 15:43:13,259 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4001 authen ok.
+2018-07-12 15:43:13,259 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60580) authen ok 
+2018-07-12 15:43:13,259 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60580
+2018-07-12 15:43:13,259 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1001 authen ok.
+2018-07-12 15:43:13,260 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60582) authen ok 
+2018-07-12 15:43:13,260 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60582
+2018-07-12 15:43:13,593 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:60584
+2018-07-12 15:43:13,594 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=8ca41b209e77b43ae437d1c15d0c1d2f
+2018-07-12 15:43:13,595 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4004 authen ok.
+2018-07-12 15:43:13,595 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:60584) authen ok 
+2018-07-12 15:43:13,595 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:60584
+2018-07-12 15:49:45,793 DEBUG [Thread-6] DataMonitor2CntServSockGroup [AppServSockGroup.java:42] TvmEventAppServSockGroup thread start
+2018-07-12 15:49:45,793 INFO [Thread-9] DcRecvDataMng [DcRecvDataMng.java:35] max stor = 100
+2018-07-12 15:49:47,867 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33712
+2018-07-12 15:49:47,867 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39388
+2018-07-12 15:49:47,874 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ba15e686d37908656e13d7a0e792c17f
+2018-07-12 15:49:47,874 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=5dd48176b0aa4b8c2a30df4d61771f99
+2018-07-12 15:49:47,876 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33714
+2018-07-12 15:49:47,876 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39398
+2018-07-12 15:49:47,877 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=fa60a4e6789ba71291f112a8dd31b805
+2018-07-12 15:49:47,877 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=8689d247a76b558c61ef79f4c856bb04
+2018-07-12 15:49:47,941 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-07-12 15:49:47,941 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4001 authen ok.
+2018-07-12 15:49:47,941 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39388) authen ok 
+2018-07-12 15:49:47,941 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33712) authen ok 
+2018-07-12 15:49:47,943 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33712) auhentic ok
+2018-07-12 15:49:47,943 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39388
+2018-07-12 15:49:47,944 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39418
+2018-07-12 15:49:47,944 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33720
+2018-07-12 15:49:47,945 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=cc3b0267a37ecf4f2083f8f45de9cd36
+2018-07-12 15:49:47,945 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=3e25fcca798718380d1965c4b83f1c62
+2018-07-12 15:49:47,947 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1002 authen ok.
+2018-07-12 15:49:47,947 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39398) authen ok 
+2018-07-12 15:49:47,948 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39398
+2018-07-12 15:49:47,948 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3002 authen ok.
+2018-07-12 15:49:47,948 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39424
+2018-07-12 15:49:47,949 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33714) authen ok 
+2018-07-12 15:49:47,949 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33714) auhentic ok
+2018-07-12 15:49:47,950 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33724
+2018-07-12 15:49:47,950 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=7a1831422d43096fafce91439bba1289
+2018-07-12 15:49:47,950 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4002 authen ok.
+2018-07-12 15:49:47,950 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39418) authen ok 
+2018-07-12 15:49:47,950 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=0441341dfab1a6e9c806cb06e182a125
+2018-07-12 15:49:47,950 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39418
+2018-07-12 15:49:47,952 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4002 authen ok.
+2018-07-12 15:49:47,952 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2001 authen ok.
+2018-07-12 15:49:47,952 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33720) authen ok 
+2018-07-12 15:49:47,953 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39424) authen ok 
+2018-07-12 15:49:47,953 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33720) auhentic ok
+2018-07-12 15:49:47,953 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39426
+2018-07-12 15:49:47,953 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33726
+2018-07-12 15:49:47,956 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=4617cfafc194e191b23601b73e0b6629
+2018-07-12 15:49:47,956 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=46856c6a5a42bb78c1f356eaf5bcb848
+2018-07-12 15:49:47,956 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39424
+2018-07-12 15:49:47,957 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2001 authen ok.
+2018-07-12 15:49:47,957 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39428
+2018-07-12 15:49:47,957 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33724) authen ok 
+2018-07-12 15:49:47,957 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33724) auhentic ok
+2018-07-12 15:49:47,957 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33728
+2018-07-12 15:49:47,958 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=eb911659d89bd8f915f97b1674f04e5c
+2018-07-12 15:49:47,958 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=735aeb1d95d3ff9e561097abeb7542a9
+2018-07-12 15:49:47,959 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33730
+2018-07-12 15:49:47,959 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39430
+2018-07-12 15:49:47,960 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=e6559af7322ab487fc3a10de5ea25893
+2018-07-12 15:49:47,960 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=320f6d9ac3e51829c4b1a87f4dc66862
+2018-07-12 15:49:47,960 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-07-12 15:49:47,960 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33726) authen ok 
+2018-07-12 15:49:47,960 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4003 authen ok.
+2018-07-12 15:49:47,960 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33726) auhentic ok
+2018-07-12 15:49:47,961 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39428) authen ok 
+2018-07-12 15:49:47,961 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33732
+2018-07-12 15:49:47,961 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4000 authen ok.
+2018-07-12 15:49:47,961 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39426) authen ok 
+2018-07-12 15:49:47,961 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39426
+2018-07-12 15:49:47,961 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39428
+2018-07-12 15:49:47,962 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=c2a77987be8f62c96fab6209fbec4002
+2018-07-12 15:49:47,962 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39432
+2018-07-12 15:49:47,962 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3001 authen ok.
+2018-07-12 15:49:47,963 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33730) authen ok 
+2018-07-12 15:49:47,963 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=2251fcbdb9558c0e49ea0933942e55d1
+2018-07-12 15:49:47,963 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1002 authen ok.
+2018-07-12 15:49:47,963 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33728) authen ok 
+2018-07-12 15:49:47,963 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33728) auhentic ok
+2018-07-12 15:49:47,963 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-07-12 15:49:47,963 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33730) auhentic ok
+2018-07-12 15:49:47,963 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39430) authen ok 
+2018-07-12 15:49:47,964 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33734
+2018-07-12 15:49:47,964 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39430
+2018-07-12 15:49:47,965 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-07-12 15:49:47,965 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=d8555eaf2609b3ad1f2e187532528609
+2018-07-12 15:49:47,965 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39432) authen ok 
+2018-07-12 15:49:47,966 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39434
+2018-07-12 15:49:47,966 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2000 authen ok.
+2018-07-12 15:49:47,966 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33732) authen ok 
+2018-07-12 15:49:47,966 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33732) auhentic ok
+2018-07-12 15:49:47,966 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=a0e344e1d12d93a0d8e790accf3ed7da
+2018-07-12 15:49:47,966 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33736
+2018-07-12 15:49:47,966 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39432
+2018-07-12 15:49:47,967 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39436
+2018-07-12 15:49:47,967 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=d7083fc353b184a0627ced87a5c3910b
+2018-07-12 15:49:47,967 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=bd5256b3813216782b3239ef187609a0
+2018-07-12 15:49:47,968 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1000 authen ok.
+2018-07-12 15:49:47,968 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39438
+2018-07-12 15:49:47,968 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33734) authen ok 
+2018-07-12 15:49:47,968 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33734) auhentic ok
+2018-07-12 15:49:47,968 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33738
+2018-07-12 15:49:47,969 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=f88bdc553e34b421422cde335ed7d9bf
+2018-07-12 15:49:47,969 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=0597c5e31f5fed2587a462266edf222f
+2018-07-12 15:49:47,969 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4003 authen ok.
+2018-07-12 15:49:47,969 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 2002 authen ok.
+2018-07-12 15:49:47,969 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33736) authen ok 
+2018-07-12 15:49:47,969 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39434) authen ok 
+2018-07-12 15:49:47,969 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33736) auhentic ok
+2018-07-12 15:49:47,970 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39434
+2018-07-12 15:49:47,970 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33740
+2018-07-12 15:49:47,970 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3001 authen ok.
+2018-07-12 15:49:47,970 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39436) authen ok 
+2018-07-12 15:49:47,970 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=bf3903e80285f49b65cccfe89b7a307a
+2018-07-12 15:49:47,970 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 3002 authen ok.
+2018-07-12 15:49:47,971 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39438) authen ok 
+2018-07-12 15:49:47,971 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39436
+2018-07-12 15:49:47,971 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33744
+2018-07-12 15:49:47,971 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39438
+2018-07-12 15:49:47,971 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=f159f4a12b93f1e0512ab73a9763d541
+2018-07-12 15:49:47,972 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 2002 authen ok.
+2018-07-12 15:49:47,972 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33738) authen ok 
+2018-07-12 15:49:47,972 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33738) auhentic ok
+2018-07-12 15:49:47,973 INFO [Thread-4] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:33746
+2018-07-12 15:49:47,973 DEBUG [Thread-4] AuthServSock [AuthServSock.java:29] send random=0a7306deff2c40ebe6fa6289eb700b0d
+2018-07-12 15:49:47,974 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 3000 authen ok.
+2018-07-12 15:49:47,974 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33740) authen ok 
+2018-07-12 15:49:47,974 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 4004 authen ok.
+2018-07-12 15:49:47,974 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33744) authen ok 
+2018-07-12 15:49:47,974 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33740) auhentic ok
+2018-07-12 15:49:47,974 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33744) auhentic ok
+2018-07-12 15:49:47,975 DEBUG [Thread-4] AuthServSock [AuthServSock.java:157] monitor 1001 authen ok.
+2018-07-12 15:49:47,975 DEBUG [Thread-4] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:33746) authen ok 
+2018-07-12 15:49:47,975 INFO [Thread-4] CmdAuthServThread [CmdAuthServThread.java:67] cmd(/10.108.159.42:33746) auhentic ok
+2018-07-12 15:49:48,371 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39440
+2018-07-12 15:49:48,373 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=710ccb543eb1c2df529451835b67417e
+2018-07-12 15:49:48,374 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39442
+2018-07-12 15:49:48,374 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=a0a1aae354ec354bf2fbdfff1fe437c6
+2018-07-12 15:49:48,375 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 1001 authen ok.
+2018-07-12 15:49:48,375 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39440) authen ok 
+2018-07-12 15:49:48,375 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39440
+2018-07-12 15:49:48,377 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4001 authen ok.
+2018-07-12 15:49:48,377 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39442) authen ok 
+2018-07-12 15:49:48,378 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39442
+2018-07-12 15:49:48,706 INFO [Thread-7] ServAuthServerSock [ServAuthServerSock.java:24] get connect from:/10.108.159.42:39444
+2018-07-12 15:49:48,707 DEBUG [Thread-7] AuthServSock [AuthServSock.java:29] send random=ad71b5842db5e59568e29deb8ca574cc
+2018-07-12 15:49:48,708 DEBUG [Thread-7] AuthServSock [AuthServSock.java:157] monitor 4004 authen ok.
+2018-07-12 15:49:48,708 DEBUG [Thread-7] AuthServSock [AuthServSock.java:102] socket from (/10.108.159.42:39444) authen ok 
+2018-07-12 15:49:48,708 INFO [Thread-7] AuthServSockThread [AuthServSockThread.java:60] Monitor authentica ok, from /10.108.159.42:39444
+2018-07-12 15:51:30,289 INFO [Thread-11] AppServSock [AppServSock.java:60] get msglen = 53
+2018-07-12 15:51:30,289 INFO [Thread-11] AppServSock [AppServSock.java:69] get dataid = 101
+2018-07-12 15:51:30,346 INFO [Thread-11] AppServSock [AppServSock.java:373] test authen ok 
+2018-07-12 15:51:30,366 INFO [Thread-11] AppServSock [AppServSock.java:106] msgproc return msg, length = 138
+2018-07-12 15:51:30,438 INFO [Thread-11] AppServSock [AppServSock.java:60] get msglen = 32
+2018-07-12 15:51:30,438 INFO [Thread-11] AppServSock [AppServSock.java:69] get dataid = 102
+2018-07-12 15:51:30,450 INFO [Thread-11] AppServSock [AppServSock.java:106] msgproc return msg, length = 214
+2018-07-12 15:51:30,451 INFO [Thread-11] AppServSock [AppServSock.java:60] get msglen = 32
+2018-07-12 15:51:30,451 INFO [Thread-11] AppServSock [AppServSock.java:69] get dataid = 300
+2018-07-12 15:51:30,453 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=0, parentid=0
+2018-07-12 15:51:30,457 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =0,id=1, name=消费类电子
+2018-07-12 15:51:30,457 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =0,id=2, name=日用化工
+2018-07-12 15:51:30,458 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =0,id=3, name=烟酒类
+2018-07-12 15:51:30,458 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=1, parentid=3
+2018-07-12 15:51:30,459 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=1, parentid=2
+2018-07-12 15:51:30,459 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =1,id=5, name=洗衣类
+2018-07-12 15:51:30,460 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =1,id=6, name=洗头水
+2018-07-12 15:51:30,463 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=2, parentid=6
+2018-07-12 15:51:30,464 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=2, parentid=5
+2018-07-12 15:51:30,465 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=1, parentid=1
+2018-07-12 15:51:30,465 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =1,id=4, name=手机
+2018-07-12 15:51:30,465 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=2, parentid=4
+2018-07-12 15:51:30,466 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =2,id=7, name=功能机
+2018-07-12 15:51:30,466 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =2,id=8, name=智能机
+2018-07-12 15:51:30,466 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=3, parentid=8
+2018-07-12 15:51:30,466 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =3,id=9, name=ios
+2018-07-12 15:51:30,466 DEBUG [Thread-11] H2Db [H2Db.java:337] classitem:level =3,id=10, name=android
+2018-07-12 15:51:30,466 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=4, parentid=10
+2018-07-12 15:51:30,467 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=4, parentid=9
+2018-07-12 15:51:30,467 DEBUG [Thread-11] H2Db [H2Db.java:323] getAdClassAtLevel with level=3, parentid=7
+2018-07-12 15:51:30,470 INFO [Thread-11] AppServSock [AppServSock.java:106] msgproc return msg, length = 495
+2018-07-12 15:51:30,472 INFO [Thread-11] AppServSock [AppServSock.java:60] get msglen = 32
+2018-07-12 15:51:30,473 INFO [Thread-11] AppServSock [AppServSock.java:69] get dataid = 400
+2018-07-12 15:51:30,482 ERROR [Thread-11] H2Db [H2Db.java:231] org.h2.jdbc.JdbcSQLException: Table "ADOWNER" not found; SQL statement:
+SELECT * FROM ADOWNER  [42102-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readTableOrView(Parser.java:5388)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1257)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1896)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2044)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1890)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1711)
+	at org.h2.command.Parser.parseSelect(Parser.java:1699)
+	at org.h2.command.Parser.parsePrepared(Parser.java:445)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:290)
+	at com.guanghui.admonitor.catalog_ui.demo.H2Db.getAdOwners(H2Db.java:221)
+	at com.guanghui.admonitor.catalog_ui.demo.MsgProcess.getAdOwnerInfo(MsgProcess.java:39)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.getAdOwners(AppServSock.java:315)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.msgproc(AppServSock.java:163)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.run(AppServSock.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+2018-07-12 15:51:30,483 INFO [Thread-11] AppServSock [AppServSock.java:106] msgproc return msg, length = 4
+2018-07-12 15:51:30,484 INFO [Thread-11] AppServSock [AppServSock.java:60] get msglen = 53
+2018-07-12 15:51:30,484 INFO [Thread-11] AppServSock [AppServSock.java:69] get dataid = 210
+2018-07-12 15:51:30,492 ERROR [Thread-11] H2Db [H2Db.java:285] org.h2.jdbc.JdbcSQLException: Table "ADINFO" not found; SQL statement:
+SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=adowner.name WHERE adowner.ad_owner_id = ? [42102-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readTableOrView(Parser.java:5388)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1257)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1896)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2044)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1890)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1711)
+	at org.h2.command.Parser.parseSelect(Parser.java:1699)
+	at org.h2.command.Parser.parsePrepared(Parser.java:445)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:290)
+	at com.guanghui.admonitor.catalog_ui.demo.H2Db.getUserProductInfo(H2Db.java:271)
+	at com.guanghui.admonitor.catalog_ui.demo.MsgProcess.getUserProductInfo(MsgProcess.java:42)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.getUserProducts(AppServSock.java:299)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.msgproc(AppServSock.java:160)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.run(AppServSock.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+2018-07-12 15:51:30,493 INFO [Thread-11] AppServSock [AppServSock.java:106] msgproc return msg, length = 4
+2018-07-12 15:51:38,428 ERROR [Thread-11] AppServSock [AppServSock.java:117] java.io.IOException: 杩滅▼涓绘満寮鸿揩鍏抽棴浜嗕竴涓幇鏈夌殑杩炴帴銆�
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:382)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.run(AppServSock.java:47)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+2018-07-12 16:03:59,655 INFO [Thread-12] AppServSock [AppServSock.java:60] get msglen = 53
+2018-07-12 16:03:59,655 INFO [Thread-12] AppServSock [AppServSock.java:69] get dataid = 101
+2018-07-12 16:03:59,657 INFO [Thread-12] AppServSock [AppServSock.java:373] test authen ok 
+2018-07-12 16:03:59,658 INFO [Thread-12] AppServSock [AppServSock.java:106] msgproc return msg, length = 138
+2018-07-12 16:03:59,737 INFO [Thread-12] AppServSock [AppServSock.java:60] get msglen = 32
+2018-07-12 16:03:59,737 INFO [Thread-12] AppServSock [AppServSock.java:69] get dataid = 102
+2018-07-12 16:03:59,739 INFO [Thread-12] AppServSock [AppServSock.java:106] msgproc return msg, length = 214
+2018-07-12 16:03:59,740 INFO [Thread-12] AppServSock [AppServSock.java:60] get msglen = 32
+2018-07-12 16:03:59,740 INFO [Thread-12] AppServSock [AppServSock.java:69] get dataid = 300
+2018-07-12 16:03:59,741 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=0, parentid=0
+2018-07-12 16:03:59,743 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =0,id=1, name=消费类电子
+2018-07-12 16:03:59,743 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =0,id=2, name=日用化工
+2018-07-12 16:03:59,743 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =0,id=3, name=烟酒类
+2018-07-12 16:03:59,743 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=1, parentid=3
+2018-07-12 16:03:59,744 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=1, parentid=2
+2018-07-12 16:03:59,744 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =1,id=5, name=洗衣类
+2018-07-12 16:03:59,744 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =1,id=6, name=洗头水
+2018-07-12 16:03:59,744 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=2, parentid=6
+2018-07-12 16:03:59,745 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=2, parentid=5
+2018-07-12 16:03:59,745 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=1, parentid=1
+2018-07-12 16:03:59,745 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =1,id=4, name=手机
+2018-07-12 16:03:59,745 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=2, parentid=4
+2018-07-12 16:03:59,746 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =2,id=7, name=功能机
+2018-07-12 16:03:59,746 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =2,id=8, name=智能机
+2018-07-12 16:03:59,746 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=3, parentid=8
+2018-07-12 16:03:59,746 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =3,id=9, name=ios
+2018-07-12 16:03:59,747 DEBUG [Thread-12] H2Db [H2Db.java:337] classitem:level =3,id=10, name=android
+2018-07-12 16:03:59,748 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=4, parentid=10
+2018-07-12 16:03:59,748 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=4, parentid=9
+2018-07-12 16:03:59,749 DEBUG [Thread-12] H2Db [H2Db.java:323] getAdClassAtLevel with level=3, parentid=7
+2018-07-12 16:03:59,752 INFO [Thread-12] AppServSock [AppServSock.java:106] msgproc return msg, length = 495
+2018-07-12 16:03:59,753 INFO [Thread-12] AppServSock [AppServSock.java:60] get msglen = 32
+2018-07-12 16:03:59,754 INFO [Thread-12] AppServSock [AppServSock.java:69] get dataid = 400
+2018-07-12 16:03:59,755 ERROR [Thread-12] H2Db [H2Db.java:231] org.h2.jdbc.JdbcSQLException: Table "ADOWNER" not found; SQL statement:
+SELECT * FROM ADOWNER  [42102-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readTableOrView(Parser.java:5388)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1257)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1896)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2044)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1890)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1711)
+	at org.h2.command.Parser.parseSelect(Parser.java:1699)
+	at org.h2.command.Parser.parsePrepared(Parser.java:445)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:290)
+	at com.guanghui.admonitor.catalog_ui.demo.H2Db.getAdOwners(H2Db.java:221)
+	at com.guanghui.admonitor.catalog_ui.demo.MsgProcess.getAdOwnerInfo(MsgProcess.java:39)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.getAdOwners(AppServSock.java:315)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.msgproc(AppServSock.java:163)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.run(AppServSock.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+2018-07-12 16:03:59,756 INFO [Thread-12] AppServSock [AppServSock.java:106] msgproc return msg, length = 4
+2018-07-12 16:03:59,759 INFO [Thread-12] AppServSock [AppServSock.java:60] get msglen = 53
+2018-07-12 16:03:59,759 INFO [Thread-12] AppServSock [AppServSock.java:69] get dataid = 210
+2018-07-12 16:03:59,760 ERROR [Thread-12] H2Db [H2Db.java:285] org.h2.jdbc.JdbcSQLException: Table "ADINFO" not found; SQL statement:
+SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=adowner.name WHERE adowner.ad_owner_id = ? [42102-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readTableOrView(Parser.java:5388)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1257)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1896)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2044)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1890)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1711)
+	at org.h2.command.Parser.parseSelect(Parser.java:1699)
+	at org.h2.command.Parser.parsePrepared(Parser.java:445)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1202)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:290)
+	at com.guanghui.admonitor.catalog_ui.demo.H2Db.getUserProductInfo(H2Db.java:271)
+	at com.guanghui.admonitor.catalog_ui.demo.MsgProcess.getUserProductInfo(MsgProcess.java:42)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.getUserProducts(AppServSock.java:299)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.msgproc(AppServSock.java:160)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.run(AppServSock.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+2018-07-12 16:03:59,760 INFO [Thread-12] AppServSock [AppServSock.java:106] msgproc return msg, length = 4
+2018-07-12 16:04:03,400 ERROR [Thread-12] AppServSock [AppServSock.java:117] java.io.IOException: 杩滅▼涓绘満寮鸿揩鍏抽棴浜嗕竴涓幇鏈夌殑杩炴帴銆�
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:382)
+	at com.guanghui.admonitor.catalog_ui.msgservchannel.impl.AppServSock.run(AppServSock.java:47)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+

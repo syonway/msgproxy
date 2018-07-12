@@ -10,37 +10,79 @@ import java.text.SimpleDateFormat;
 
 public class TimeTransform {
     public static void main(String[] args) throws Exception {
-        int time = 1528110574-31*24*3600;
-        System.out.println(timeStamp2file(Integer.toString(1530726080)));
-        System.out.println(Date2UnixStamp("2018-07-05 01:41:20.351"));
-        System.out.println(getStartTimeFromFile("2018_07_05_01_41_20_2018_07_05_01_51_20:453_"));
+        System.out.println(timeStamp2Date(1527686650000L));
+        System.out.println(systemAdd(1527686650000L));
+        System.out.println(timeStamp2Date(systemAdd(1527686650000L)));
+        System.out.println(timeStamp2file(1527686650000L,1527686690000L));
+        System.out.println(sysStamp2date(1527715450000L));
+
         System.out.println();
-        System.out.println(Date2UnixStamp(getStartTimeFromFile("2018_07_05_01_41_20_2018_07_05_01_51_20:67_")));
+
+        System.out.println(Date2UnixStamp("2018-05-30 21:24:10.000"));
+        System.out.println();
+        System.out.println(getStartTimeFromFile("2018_04_31_5_24_10__2018_04_31_6_25_7:918_v.ts.ftr"));
+
+
         long tryi = Date2UnixStamp("2018-07-05 01:43:20.99");
         Boolean t = tryi>Date2UnixStamp(getStartTimeFromFile("2018_07_05_01_41_20_2018_07_05_01_51_20:89_")) &&
                 tryi<=Date2UnixStamp(getEndTimeFromFile("2018_07_05_01_41_20_2018_07_05_01_51_20:89_"));
         System.out.println(t);
     }
 
-    public static String timeStamp2Date1(String timestampString){
-        String format = "yyyy-MM-dd HH:mm:ss";
-        Long timestamp = Long.parseLong(timestampString)*1000;
-        String date = new java.text.SimpleDateFormat(format).format(new java.util.Date(timestamp));
-        return date;
+    public static long systemAdd(long timestamp){
+        return (timestamp+8*3600*1000);
     }
 
-    public static String timeStamp2Date(String timestampString){
+    public static String timeStamp2Date(long timestamp){
         String format = "yyyy-MM-dd HH:mm:ss.SSS";
-        Long timestamp = Long.parseLong(timestampString);
         String date = new java.text.SimpleDateFormat(format).format(new java.util.Date(timestamp));
         return date;
     }
 
-    public static String timeStamp2file(String timestamp) {
-        String date = timeStamp2Date1(timestamp);
-        String end = timeStamp2Date(Integer.toString(Integer.parseInt(timestamp)+600));
+    public static String timeStamp2file(long start,long end) {
+        String date = timeStamp2Date(systemAdd(start));
+        String date2 = timeStamp2Date(systemAdd(end));
+        System.out.println(date);
+        String format = "yyyy-MM-dd HH:mm:ss.SSS";
+        String res = "none";
+        try {
+            Date dat = new SimpleDateFormat(format).parse(date);
+            Calendar calendar = Calendar.getInstance();//日历对象
+            calendar.setTime(dat);
+            String yearStr = calendar.get(Calendar.YEAR)+"";//获取年份
+            int month = calendar.get(Calendar.MONTH) + 1;//获取月份
+            int day = calendar.get(Calendar.DATE);//获取日
+            month = month-1;
+            String mon = Integer.toString(month);
+            if(month<10)
+                mon = "0"+mon;
+            int h = calendar.get(Calendar.HOUR);
+            int m = calendar.get(Calendar.MINUTE);
+            int s = calendar.get(Calendar.SECOND);
+            int ss = calendar.get(Calendar.MILLISECOND);
 
-        return date+"_"+end;
+            Date dat2 = new SimpleDateFormat(format).parse(date2);
+            Calendar calendar2 = Calendar.getInstance();//日历对象
+            calendar.setTime(dat2);
+            String yearStr2 = calendar.get(Calendar.YEAR)+"";//获取年份
+            int month2 = calendar.get(Calendar.MONTH) + 1;//获取月份
+            int day2 = calendar.get(Calendar.DATE);//获取日
+            month2 = month2-1;
+            String mon2 = Integer.toString(month2);
+            if(month2<10)
+                mon2 = "0"+mon2;
+            int h2 = calendar2.get(Calendar.HOUR);
+            int m2 = calendar2.get(Calendar.MINUTE);
+            int s2 = calendar2.get(Calendar.SECOND);
+            int ss2 = calendar2.get(Calendar.MILLISECOND);
+
+            System.out.println(yearStr+"  "+month+"  "+day+" "+h+"  "+m+" "+s+" "+ss);
+            res = yearStr+"_"+mon+""+"_"+day+"_"+h+"_"+m+"_"+s+"__"+yearStr2+"_"+mon2+"_"+day2+"_"+h2+"_"+m2+"_"+s2+":"+ss2+"_v.ts.ftr";
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return res;
     }
 
     public static long Date2UnixStamp(String date) {
@@ -56,6 +98,14 @@ public class TimeTransform {
         }
         return stamp;
     }
+
+    public static String sysStamp2date(long stamp){
+        long truestamp = stamp-8*3600*1000;
+        return timeStamp2Date(truestamp);
+    }
+
+
+
 
     public static String getStartTimeFromFile(String name) {
         String st = null;

@@ -63,11 +63,15 @@ public class DemoLoop {
         String url = "jdbc:mysql://115.28.61.129:3306/syads?serverTimezone=UTC";
         String user = "root";
         String password = "123456";
-        Class.forName(driver);
-        con = DriverManager.getConnection(url,user,password);
-        if(!con.isClosed())
-            System.out.println("Succeeded connecting to the Database!");
-        statement = con.createStatement();
+        try {
+            Class.forName(driver);
+            con = DriverManager.getConnection(url, user, password);
+            if (!con.isClosed())
+                System.out.println("Succeeded connecting to the Database!");
+            statement = con.createStatement();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
     
     public Connection getConnection(){
@@ -347,7 +351,7 @@ public class DemoLoop {
                         moid = matchMonitorlist.get(0).getMonitorid();
                         matask.channelPath = "ts/"+channellist.get(i);
                         String getRefSql = "SELECT *  FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
-                        String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'"";
+                        String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE channelinfo.name='"+channellist.get(i)+"'";
                         String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
                         PreparedStatement refstatement= con.prepareStatement(getRefSql);
                         PreparedStatement refnum = con.prepareStatement(getRefNumOfNasIp);

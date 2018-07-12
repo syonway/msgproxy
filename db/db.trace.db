@@ -2340,3 +2340,15 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/sy/
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:344)
 	... 21 more
+2018-07-12 15:51:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADOWNER" not found; SQL statement:
+SELECT * FROM ADOWNER  [42102-192]
+2018-07-12 15:51:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADINFO" not found; SQL statement:
+SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=adowner.name WHERE adowner.ad_owner_id = ? [42102-192]
+2018-07-12 16:03:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADOWNER" not found; SQL statement:
+SELECT * FROM ADOWNER  [42102-192]
+2018-07-12 16:03:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADINFO" not found; SQL statement:
+SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=adowner.name WHERE adowner.ad_owner_id = ? [42102-192]

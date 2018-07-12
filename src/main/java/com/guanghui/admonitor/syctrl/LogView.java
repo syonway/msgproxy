@@ -160,7 +160,7 @@ public class LogView {
                 for (int i = 0; i < res.matchItems.size(); i++) {
                     statement2.setInt(1, res.matchItems.get(i).channelid);
                     statement2.setTimestamp(2, Timestamp.valueOf(
-                            TimeTransform.timeStamp2Date(Long.toString(res.matchItems.get(i).startTime))));
+                            TimeTransform.timeStamp2Date(res.matchItems.get(i).startTime)));
                     statement2.setLong(3, res.matchItems.get(i).frameNr);
                     statement2.setFloat(4, res.matchItems.get(i).loudness);
                     statement2.setString(5,res.matchItems.get(i).refurl);
