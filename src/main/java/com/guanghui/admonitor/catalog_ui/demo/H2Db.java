@@ -172,7 +172,7 @@ public class H2Db {
         int id = -1;
         String sql = "SELECT userid from user_tab where user_name = ?";
         try {
-            PreparedStatement statement = connection.prepareStatement(sql);
+            PreparedStatement statement = conn2.prepareStatement(sql);
             statement.setString(1, name);
             ResultSet rs = statement.executeQuery();
             if (rs.next()){
@@ -192,7 +192,7 @@ public class H2Db {
         }
         String sql = "SELECT channelid,name, url, catalog_time  FROM channel_tab WHERE catalog_userid = ?";
         try {
-            PreparedStatement statement = connection.prepareStatement(sql);
+            PreparedStatement statement = conn2.prepareStatement(sql);
             statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             res = new UserTaskInfo();
@@ -216,15 +216,15 @@ public class H2Db {
 
     public synchronized AdOwnerInfo getAdOwners(){
         AdOwnerInfo res = null;
-        String sql = "SELECT * FROM ADOWNER ";
+        String sql = "SELECT * FROM ownerinfo ";
         try{
-            PreparedStatement statement = connection.prepareStatement(sql);
+            PreparedStatement statement = conn2.prepareStatement(sql);
             ResultSet rs = statement.executeQuery();
             res = new AdOwnerInfo();
             while (rs.next()){
                 AdOwnerItem owner = new AdOwnerItem();
-                owner.id = rs.getLong("AD_OWNER_ID");
-                owner.itemName = rs.getString("Name");
+                owner.id = rs.getLong("id");
+                owner.itemName = rs.getString("name");
                 res.items.push(owner);
             }
         }catch (SQLException e) {
@@ -266,9 +266,9 @@ public class H2Db {
     
     public synchronized UserProductInfo getUserProductInfo(int ownerid){
        UserProductInfo res = null;
-       String sql = "SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=adowner.name WHERE adowner.ad_owner_id = ?";
+       String sql = "SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=ownerinfo.name WHERE ownerinfo.id = ?";
        try{
-           PreparedStatement statement = connection.prepareStatement(sql);
+           PreparedStatement statement = conn2.prepareStatement(sql);
            statement.setInt(1, ownerid);
            ResultSet rs = statement.executeQuery();
            res = new UserProductInfo();
@@ -292,7 +292,7 @@ public class H2Db {
         String sql = "select * from user_tab where user_name = ?" ;
         UserInfo userInfo = null;
         try {
-            PreparedStatement statement = connection.prepareStatement(sql);
+            PreparedStatement statement = conn2.prepareStatement(sql);
             statement.setString(1, userName);
             ResultSet rs = statement.executeQuery();
             if (rs.next()){
@@ -322,7 +322,7 @@ public class H2Db {
                  "and parent_id = ? and is_using = ?";
          logger.debug("getAdClassAtLevel with level={}, parentid={}", level, parentid);
         try {
-            PreparedStatement statement = connection.prepareStatement(getLevelClassItemSql);
+            PreparedStatement statement = conn2.prepareStatement(getLevelClassItemSql);
             statement.setInt(1, level);
             statement.setInt(2, parentid);
             statement.setInt(3, 1);
