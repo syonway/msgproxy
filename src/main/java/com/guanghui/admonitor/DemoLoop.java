@@ -17,29 +17,28 @@ import com.guanghui.admonitor.backservice.ctrlcntmsg.send.response.NasMountInfos
 import com.guanghui.admonitor.catalog_ui.demo.H2Db;
 import com.guanghui.admonitor.catalog_ui.demo.MsgProcess;
 import com.guanghui.admonitor.catalog_ui.msgservchannel.MsgChannelServer;
-import com.guanghui.admonitor.catalog_ui.msgservchannel.msgs.ChannelMatchMsg;
-import com.guanghui.admonitor.catalog_ui.msgservchannel.msgs.ReqChannelMatchMsg;
+import com.guanghui.admonitor.syctrl.MonitorItem;
+import com.guanghui.admonitor.syctrl.logThread;
+import com.guanghui.admonitor.syctrl.startMatch;
 import com.guanghui.itvm.dcbase.DataChannelMng;
-import com.guanghui.admonitor.syctrl.*;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.apache.commons.lang3.exception.ExceptionUtils;
-
-import java.sql.*;
-import java.util.HashMap;
-
-import org.json.JSONArray;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.guanghui.admonitor.syctrl.logThread;
 
 import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
-import org.json.JSONObject;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by cuiju on 2017/1/12. 16 34
@@ -107,6 +106,9 @@ public class DemoLoop {
         sendProcessthread.setDaemon(true);
         ///for backservice demo end
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        startMatch m = new startMatch();
+        ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+        executorService.scheduleAtFixedRate(m ,5, 7, TimeUnit.SECONDS);
         while (true){
             try {
               //  String ress = sendmsg(new String[]{"send","add_calfeaturetask","2000","testjson\\caltask.json"});
@@ -495,7 +497,7 @@ public class DemoLoop {
 
 
 
-    private String sendmsg(String[] cmds){
+    public String sendmsg(String[] cmds){
         if (cmds.length < 4) {
             help();
             return "cmds.length < 4";
@@ -507,7 +509,7 @@ public class DemoLoop {
         try {
             if (cmds[1].equals("recordtask"))   {
                 RecvTask recvTask = objectMapper.readValue(file, RecvTask.class) ;
-                AddDelRecvTaskResult  respose = sendMsg.sendAddRecvTask(monitorid, recvTask);
+                AddDelRecvTaskResult respose = sendMsg.sendAddRecvTask(monitorid, recvTask);
                 System.out.println("respose: ");
                 resStr = objectMapper.writeValueAsString(respose);
                 System.out.println(resStr);
@@ -516,7 +518,7 @@ public class DemoLoop {
                 System.out.println("code:"+response.getInt("code"));//return resStr;
             }else if(cmds[1].equals("del")) {
                 RecvTask recvTask = objectMapper.readValue(file, RecvTask.class) ;
-                AddDelRecvTaskResult  respose = sendMsg.sendDelRecvTask(monitorid, recvTask);
+                AddDelRecvTaskResult respose = sendMsg.sendDelRecvTask(monitorid, recvTask);
                 resStr = objectMapper.writeValueAsString(respose);
                 System.out.println("del"+resStr);
                 // return resStr;

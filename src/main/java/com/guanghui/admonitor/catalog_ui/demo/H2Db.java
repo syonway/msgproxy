@@ -28,13 +28,14 @@ public class H2Db {
                 System.out.println("init h2 success");
 
                 String driver = "com.mysql.cj.jdbc.Driver";
-                String url = "jdbc:mysql://localhost:3306/ads?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8 ";
+                String url = "jdbc:mysql://115.28.61.129:3306/syads?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8 ";
                 String user = "root";
-                String password = "root";
+                String password = "123456";
                 Class.forName(driver);
                 conn2 = DriverManager.getConnection(url,user,password);
                 //if(!conn2.isClosed())
                 //sout
+                UserProductInfo a = getUserProductInfo(0);
                 ReqChannelMatchMsg rsq = new ReqChannelMatchMsg();
                 rsq.channelid = 17;
                 rsq.startTime = 1527715447280L;
@@ -237,7 +238,7 @@ public class H2Db {
 
     public synchronized ChannelMatchMsg getChannelMatch(ReqChannelMatchMsg reqMsg){
         //?+8h后可能调整
-        String sql = "select * from adclipinfo_tab where own_channelid = ? and unix_timestamp(start_time)*1000+8*3600000 between ? and ?";
+        String sql = "select * from adclipinfo_tab where own_channelid = ? and unix_timestamp(start_time)*1000 between ? and ?";
         ChannelMatchMsg res = new ChannelMatchMsg();
         try{
             PreparedStatement statement = conn2.prepareStatement(sql);
@@ -252,7 +253,8 @@ public class H2Db {
                 ma.channelid = rs.getInt("own_channelid");
                 ma.refurl = rs.getString("url");
                 ma.startTime = TimeTransform.Date2UnixStamp((rs.getTimestamp("start_time")).toString());
-                ma.frameNr =  rs.getInt("frame_nr");
+                //ma.frameNr =  rs.getInt("frame_nr");
+                ma.endTime = ma.startTime+rs.getInt("frame_nr")/24*1000;
                 res.matchItems.add(ma);
                 System.out.println("match");
                 System.out.println("match:"+rs.getInt("clipid")+" "+ma.startTime);
@@ -266,7 +268,7 @@ public class H2Db {
     
     public synchronized UserProductInfo getUserProductInfo(int ownerid){
        UserProductInfo res = null;
-       String sql = "SELECT * FROM adinfo INNER JOIN adowner ON adinfo.manufacturer=ownerinfo.name WHERE ownerinfo.id = ?";
+       String sql = "SELECT * FROM adinfo INNER JOIN ownerinfo ON adinfo.manufacturer=ownerinfo.name WHERE ownerinfo.id = ?";
        try{
            PreparedStatement statement = conn2.prepareStatement(sql);
            statement.setInt(1, ownerid);
