@@ -51,6 +51,7 @@ public class startMatch implements Runnable {
             // 对应频道获取ref url，无则不发送指令
             // String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type =
             // 'matchclip' ";
+            String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type = 'matchclip' ";
             Statement statement2 = con.createStatement();
             ResultSet monitorAndChannelrs = statement2.executeQuery(queryMatchTaskMonitor);
             while (monitorAndChannelrs.next()) {
@@ -133,8 +134,9 @@ public class startMatch implements Runnable {
                     }
                 } 
 
-                con.close();
             }
+            
+            con.close();
 
             // 读取log结果
 

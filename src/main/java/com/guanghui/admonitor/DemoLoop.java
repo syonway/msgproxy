@@ -439,7 +439,7 @@ public class DemoLoop {
                 // 没有monitor的频道，取空monitor中monitor分配
                 if (!channelMatchm.contains(channellist.get(i))) {
                     String addChannelMatch = "UPDATE monitor SET task = 1 AND task_on= '" + channellist.get(i)
-                            + "'WHERE id = ";
+                            + "',task_plan= '"+channellist.get(i)+"' WHERE id = ";
                     if (emmonitor.size() > 0) {
                         int monitorid = emmonitor.get(emmonitor.size() - 1);
                         if (statement.executeUpdate(addChannelMatch + monitorid) > 0) {
@@ -461,6 +461,7 @@ public class DemoLoop {
 
 
                 //检查所有已运行任务运行情况
+                Statement prostatement = con.createStatement() ;
                 String queryRunningTaskMonitor = "SELECT * FROM monitor WHERE task=1";
                 ResultSet rsRunning = statement.executeQuery(queryRunningTaskMonitor);
                 while(rsRunning.next()){
@@ -470,11 +471,16 @@ public class DemoLoop {
                     System.out.println(id+"  "+mtype);
                     int resCheck=0;
                     HashMap<String,String> promap = new HashMap();
+                    String monitorProblem = "UPDATE monitor SET problem = 1 WHERE id ="+id;
                     switch (mtype){
                         case "tsh264":
                             promap.put("channelName",mtask);
                             promap.put("recordPath","/ts/"+mtask);
                             ChangeFileData("testjson\\recvtask.json",promap);
+                            if(sendmsg(new String[]{"send","recordtask",Integer.toString(id),"testjson\\recvtask.json"}).equals("null")){
+                                int m = prostatement.executeUpdate(monitorProblem); 
+                                break;                            
+                            }
                             resCheck = (new JSONObject(sendmsg(new String[]{"send","recordtask",Integer.toString(id),"testjson\\recvtask.json"})))
                                         .getJSONObject("response").getInt("code");
                             if(resCheck==-1)
@@ -485,6 +491,10 @@ public class DemoLoop {
                         case "calfeature":
                             promap.put("calPath","/ts/"+mtask);
                             ChangeFileData("testjson\\caltask.json",promap);
+                            if((sendmsg(new String[]{"send","add_calfeaturetask",Integer.toString(id),"testjson\\caltask.json"}).equals("null"))){
+                                int m = prostatement.executeUpdate(monitorProblem); 
+                                break; 
+                            }
                             resCheck = (new JSONObject(sendmsg(new String[]{"send","add_calfeaturetask",Integer.toString(id),"testjson\\caltask.json"})))
                                         .getInt("code");
                             if(resCheck==-1)
@@ -492,7 +502,7 @@ public class DemoLoop {
                             else
                                 System.out.println(id+" stop");
                             break;
-                        case "matchclip":
+                       // case "matchclip":
                             /**
                             //?match是一直运行吗？
                             promap.put("channelPath","/ts/"+mtask);
@@ -503,7 +513,7 @@ public class DemoLoop {
                                 statement.executeUpdate(monitorWrong);
                             }
                             else System.out.println(id+" stop");**/
-                            break;
+                         //   break;
 
                     }
                     //设一下rescheck检验
