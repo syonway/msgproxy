@@ -5,6 +5,7 @@ import com.guanghui.admonitor.DemoLoop;
 import com.guanghui.admonitor.backservice.SendMsg;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.send.FindReplayClipTaskMsg;
 import com.guanghui.admonitor.backservice.ctrlcntmsg.send.RefAdClips;
+import org.json.JSONObject;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -50,7 +51,7 @@ public class startMatch implements Runnable{
         List<Integer> emmonitor = new ArrayList<>();
         while (channelrs.next()){
             channellist.add(channelrs.getString("name"));
-        }    
+        }
         String queryEmptyMonitor = "SELECT * FROM monitor WHERE task=0 AND type = 'matchclip' ";
         String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type = 'matchclip' ";
         ResultSet monitorrs = statement.executeQuery(queryMatchTaskMonitor);
@@ -132,19 +133,49 @@ public class startMatch implements Runnable{
                 matask.refAdClips.add(ref);
             }
             if(urltotalnum>0) {
+                matask.startTime = Long.toString(System.currentTimeMillis());
+                matask.endTime = Long.toString(Long.parseLong(matask.startTime)+60*60*1000);
                 String mtask = (new ObjectMapper()).writeValueAsString(matask);
                 File matchf = new File("testjson\\findreplayclip.json");
                 BufferedWriter output3 = new BufferedWriter(new FileWriter(matchf));
                 output3.write(mtask);
                 output3.close();
+
+
+                DemoLoop demoLoop = DemoLoop.getInstance();
+                String getMonitor = "SELECT id from monitor where task=0 and problem=0 and type = 'matchclip'";
+                Statement mstatement = con.createStatement();
+                ResultSet mrs = mstatement.executeQuery(getMonitor);
+                if(mrs.next()) {
+                    int id  = mrs.getInt("id");
+                    String res = demoLoop.sendmsg(new String[]{"send", "matchadreplaytask", Integer.toString(id), "testjson\\findreplayclip.json"});
+                    if (res.equals("null")) {
+                        System.out.println(id + " wrong");
+                        String monitorWrong = "UPDATE monitor SET problem = 1 WHERE id=" + id;
+                        int i = statement.executeUpdate(monitorWrong);
+                    } else {
+                        if ((new JSONObject(res)).getInt("code") ==0) {
+                            if(mstatement.executeUpdate("UPDATE monitor SET task =1,task_on = '"+monitorAndChannelrs.getString("")+"' WHERE id=" + id)>0)
+                                ;
+                        } else if((new JSONObject(res)).getInt("code") == 0) {
+                            System.out.println("send match to " + moid + " fail");
+                            String monitorStop = "UPDATE monitor SET task = 0,task_on='',task_plan='' WHERE id=" + id;
+                        }
+                    }
+                }
+                else{
+                    System.out.println("need more match monitor");
+                }
+
+
             }
+            con.close();
         }
 
 
-        //定时发送
         //读取log结果
 
-        //ps明天要看addclip信息，添加数据（自行拼凑文件名，减去八小时插入·）
+        //ps明天要看addclip信息，添加数据（自行拼凑文件名）
         }catch(Exception e){
             e.printStackTrace();
         }

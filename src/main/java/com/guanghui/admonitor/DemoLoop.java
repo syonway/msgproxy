@@ -57,7 +57,7 @@ public class DemoLoop {
 
     private Connection con;
     private Statement statement;
-    private void connSql(){
+    public void connSql(){
         String driver = "com.mysql.cj.jdbc.Driver";
         String url = "jdbc:mysql://115.28.61.129:3306/syads?serverTimezone=UTC";
         String user = "root";
@@ -72,7 +72,7 @@ public class DemoLoop {
             e.printStackTrace();
         }
     }
-    
+
     public Connection getConnection(){
         return DemoLoop.getInstance().con;
     }
@@ -106,9 +106,10 @@ public class DemoLoop {
         sendProcessthread.setDaemon(true);
         ///for backservice demo end
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        startMatch m = new startMatch();
+
+      /**  startMatch m = new startMatch();
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
-        executorService.scheduleAtFixedRate(m ,5, 7, TimeUnit.SECONDS);
+        executorService.scheduleAtFixedRate(m ,5, 7, TimeUnit.SECONDS);*/
         while (true){
             try {
               //  String ress = sendmsg(new String[]{"send","add_calfeaturetask","2000","testjson\\caltask.json"});
@@ -140,7 +141,7 @@ public class DemoLoop {
                 for(int i=0;i<monitorlist.length;i++) System.out.print(monitorlist[i]+" ");
                 System.out.println("ml:"+monitorlist.length);
 
-            
+
 
 
 
@@ -169,7 +170,7 @@ public class DemoLoop {
                 }
 
 
-                monitorlist = new String[]{"4000","4001","4002"};
+                //monitorlist = new String[]{"4000","4001","4002"};
                 //获取四种空monitor
                 String queryEmptyMonitor = "SELECT * FROM monitor WHERE task=0 ";
                 ResultSet rsEMmonitor = statement.executeQuery(queryEmptyMonitor);
