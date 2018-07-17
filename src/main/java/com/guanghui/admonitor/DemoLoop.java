@@ -344,6 +344,7 @@ public class DemoLoop {
                     }
                 }
 
+                /** 
                 for(int i=0;i<channelMatch.length;i++){
                     int moid;
                     if(channelMatch[i][2]!=1){
@@ -418,7 +419,46 @@ public class DemoLoop {
                             System.out.println("send match to "+moid+" fail");
                         }
                     }
+                } **/
+
+                Statement statement = con.createStatement();
+            List<String> channelMatchm = new ArrayList<>(); // 有monitor的频道
+            List<Integer> emmonitor = new ArrayList<>(); // 空monitor
+            
+            String queryEmptyMatchMonitor = "SELECT * FROM monitor WHERE task=0 AND type = 'matchclip' ";
+            String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type = 'matchclip' ";
+            ResultSet monitorrs = statement.executeQuery(queryMatchTaskMonitor);
+            while (monitorrs.next()) {
+                channelMatchm.add(monitorrs.getString("task_on"));
+            }
+            ResultSet emonitorrs = statement.executeQuery(queryEmptyMatchMonitor);
+            while (emonitorrs.next()) {
+                emmonitor.add(emonitorrs.getInt("id"));
+            }
+            for (int i = 0; i < channellist.size(); i++) {
+                // 没有monitor的频道，取空monitor中monitor分配
+                if (!channelMatchm.contains(channellist.get(i))) {
+                    String addChannelMatch = "UPDATE monitor SET task = 1 AND task_on= '" + channellist.get(i)
+                            + "'WHERE id = ";
+                    if (emmonitor.size() > 0) {
+                        int monitorid = emmonitor.get(emmonitor.size() - 1);
+                        if (statement.executeUpdate(addChannelMatch + monitorid) > 0) {
+                            emmonitor.remove(emmonitor.size() - 1);
+                            System.out.println(channellist.get(i) + " has match monitor now");
+                        } else {
+                            System.out.println(channellist.get(i) + " fail to get match monitor ");
+                        }
+                    } else {
+                        System.out.println("need more match monitor");
+                        break;
+                    }
+
+                } else {
+                    System.out.println(channellist.get(i) + " has already been matching ");
                 }
+
+            }
+
 
                 //检查所有已运行任务运行情况
                 String queryRunningTaskMonitor = "SELECT * FROM monitor WHERE task=1";
