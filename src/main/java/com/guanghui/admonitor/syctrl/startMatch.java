@@ -33,7 +33,7 @@ public class startMatch implements Runnable {
 
         // 读取频道，获取monitor信息，分配
         try {
-            String sqlmc = "select * FROM channelinfo";
+            String sqlmc = "select * FROM channel_info";
             // Connection con = dm.getConnection();
 
             String driver = "com.mysql.cj.jdbc.Driver";
@@ -49,8 +49,7 @@ public class startMatch implements Runnable {
             
 
             // 对应频道获取ref url，无则不发送指令
-            // String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type =
-            // 'matchclip' ";
+             String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type = 'matchclip' ";
             Statement statement2 = con.createStatement();
             ResultSet monitorAndChannelrs = statement2.executeQuery(queryMatchTaskMonitor);
             while (monitorAndChannelrs.next()) {
@@ -58,11 +57,11 @@ public class startMatch implements Runnable {
                 matask.channelPath = "ts/" + monitorAndChannelrs.getString("task_on");
                 int moid = monitorAndChannelrs.getInt("id");
 
-                String getRefSql = "SELECT *  FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"
+                String getRefSql = "SELECT *  FROM adinfo INNER JOIN channel_info on adinfo.channelid=channel_info.id WHERE url = ? and channel_info.name='"
                         + monitorAndChannelrs.getString("task_on") + "'";
-                String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE channelinfo.name='"
+                String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channel_info on adinfo.channelid=channel_info.id WHERE channel_info.name='"
                         + monitorAndChannelrs.getString("task_on") + "'";
-                String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"
+                String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channel_info on adinfo.channelid=channel_info.id WHERE url = ? and channel_info.name='"
                         + monitorAndChannelrs.getString("task_on") + "'";
                 String getRecordIp = "SELECT pathIp from channel_tab WHERE name = '"
                         + monitorAndChannelrs.getString("task_on") + "'";

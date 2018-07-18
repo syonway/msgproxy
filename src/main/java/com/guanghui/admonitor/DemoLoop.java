@@ -107,7 +107,7 @@ public class DemoLoop {
         ///for backservice demo end
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-      /**  startMatch m = new startMatch();
+       /** startMatch m = new startMatch();
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
         executorService.scheduleAtFixedRate(m ,5, 7, TimeUnit.SECONDS);*/
         while (true){
@@ -213,7 +213,7 @@ public class DemoLoop {
                 }
 
                 //获取channelname
-                String sqlmc = "select * FROM channelinfo";
+                String sqlmc = "select * FROM channel_info";
                 ResultSet channelrs = statement.executeQuery(sqlmc);
                 List<String> channellist = new ArrayList<>();
                 while (channelrs.next()){
@@ -354,9 +354,9 @@ public class DemoLoop {
                         }
                         moid = matchMonitorlist.get(0).getMonitorid();
                         matask.channelPath = "ts/"+channellist.get(i);
-                        String getRefSql = "SELECT *  FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
-                        String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE channelinfo.name='"+channellist.get(i)+"'";
-                        String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channelinfo on adinfo.channelid=channelinfo.id WHERE url = ? and channelinfo.name='"+channellist.get(i)+"'";
+                        String getRefSql = "SELECT *  FROM adinfo INNER JOIN channel_info on adinfo.channelid=channel_info.id WHERE url = ? and channel_info.name='"+channellist.get(i)+"'";
+                        String getRefUrl = "SELECT DISTINCT url FROM adinfo INNER JOIN channel_info on adinfo.channelid=channel_info.id WHERE channel_info.name='"+channellist.get(i)+"'";
+                        String getRefNumOfNasIp = "SELECT count(*) cou FROM adinfo INNER JOIN channel_info on adinfo.channelid=channel_info.id WHERE url = ? and channel_info.name='"+channellist.get(i)+"'";
                         PreparedStatement refstatement= con.prepareStatement(getRefSql);
                         PreparedStatement refnum = con.prepareStatement(getRefNumOfNasIp);
                         ResultSet urlrs = statement.executeQuery(getRefUrl);

@@ -6,6 +6,7 @@ package com.guanghui.admonitor.catalog_ui.msgservchannel.msgs;
 public class MatchItem {
 
     public int clipid;//暂时
+    public String refname;
     public int channelid;
     public long startTime;
     public long endTime;
@@ -13,6 +14,9 @@ public class MatchItem {
     public long frameNr;
     public long matchNr;
     public float loudness;
+    public int ownerid;
+    public int agentid;
+    public int classficationid;
     public boolean isAutoMatched = true;
     public boolean isCatalogued = false;
     public boolean isChecked = false;
