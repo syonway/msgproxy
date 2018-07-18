@@ -35,7 +35,7 @@ public class H2Db {
                 conn2 = DriverManager.getConnection(url,user,password);
                 //if(!conn2.isClosed())
                 //sout
-                UserProductInfo a = getUserProductInfo(0);
+                UserProductInfo a = getUserProductInfo(1);
                 ReqChannelMatchMsg rsq = new ReqChannelMatchMsg();
                 rsq.channelid = 17;
                 rsq.startTime = 1527715447280L;
@@ -217,7 +217,7 @@ public class H2Db {
 
     public synchronized AdOwnerInfo getAdOwners(){
         AdOwnerInfo res = null;
-        String sql = "SELECT * FROM ownerinfo ";
+        String sql = "SELECT * FROM firm_info ";
         try{
             PreparedStatement statement = conn2.prepareStatement(sql);
             ResultSet rs = statement.executeQuery();
@@ -238,7 +238,7 @@ public class H2Db {
 
     public synchronized ChannelMatchMsg getChannelMatch(ReqChannelMatchMsg reqMsg){
         //?+8h后可能调整
-        String sql = "select * from adclipinfo_tab where own_channelid = ? and unix_timestamp(start_time)*1000 between ? and ?";
+        String sql = "select * from adclipinfo_tab inner join ad_info on adclipinfo_tab.url= ad_info.file_path where own_channelid = ? and start_time between ? and ?";
         ChannelMatchMsg res = new ChannelMatchMsg();
         try{
             PreparedStatement statement = conn2.prepareStatement(sql);
@@ -246,18 +246,23 @@ public class H2Db {
             //要改成2002-01-29 04:33:38.531格式字符串时间
             statement.setLong(2, reqMsg.startTime);
             statement.setLong(3, reqMsg.endTime);
-            System.out.println("select * from adclipinfo_tab where own_channelid = "+reqMsg.channelid+" and start_time between '"+reqMsg.startTime+"' and '"+reqMsg.endTime+"'");
+            System.out.println("select * from adclipinfo_tab inner join adinfo on adclipinfo_tab.url= adinfo.lambdaFile where own_channelid = "+reqMsg.channelid+" and start_time between '"+reqMsg.startTime+"' and '"+reqMsg.endTime+"'");
             ResultSet rs = statement.executeQuery();
             while(rs.next()){
                 MatchItem ma = new MatchItem();
+                ma.clipid = rs.getInt("clipid");
+                ma.refname = rs.getString("pro_desc");
+                ma.ownerid = rs.getInt("ad_ownerid");
+                ma.agentid = rs.getInt("ad_agentid");
+                ma.classficationid = rs.getInt("classficationid");
                 ma.channelid = rs.getInt("own_channelid");
                 ma.refurl = rs.getString("url");
-                ma.startTime = TimeTransform.Date2UnixStamp((rs.getTimestamp("start_time")).toString());
+                ma.startTime = rs.getLong("start_time");
                 //ma.frameNr =  rs.getInt("frame_nr");
                 ma.endTime = ma.startTime+rs.getInt("frame_nr")/24*1000;
                 res.matchItems.add(ma);
                 System.out.println("match");
-                System.out.println("match:"+rs.getInt("clipid")+" "+ma.startTime);
+                System.out.println("match:"+rs.getInt("clipid")+" "+ma.startTime+ma.endTime);
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -268,7 +273,7 @@ public class H2Db {
     
     public synchronized UserProductInfo getUserProductInfo(int ownerid){
        UserProductInfo res = null;
-       String sql = "SELECT * FROM adinfo INNER JOIN ownerinfo ON adinfo.manufacturer=ownerinfo.name WHERE ownerinfo.id = ?";
+       String sql = "SELECT * FROM ad_info  WHERE firm_id = ?";
        try{
            PreparedStatement statement = conn2.prepareStatement(sql);
            statement.setInt(1, ownerid);
@@ -278,7 +283,7 @@ public class H2Db {
            while(rs.next()){
                Productinfo pro = new Productinfo();
                pro.id = rs.getLong("id");
-               pro.itemName = rs.getString("mainBrand")+" "+rs.getString("proDescription");
+               pro.itemName = rs.getString("brand")+" "+rs.getString("pro_desc");
                res.items.push(pro);
                System.out.println(pro.id+" "+pro.itemName);
            }

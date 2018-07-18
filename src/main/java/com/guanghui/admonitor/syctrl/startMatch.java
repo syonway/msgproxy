@@ -22,6 +22,7 @@ import javax.swing.plaf.nimbus.State;
 
 public class startMatch implements Runnable {
     private long starttime = System.currentTimeMillis();
+    private long nexttime = System.currentTimeMillis();
 
     @Override
     public void run() {
@@ -49,9 +50,21 @@ public class startMatch implements Runnable {
             
 
             // 对应频道获取ref url，无则不发送指令
-             String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type = 'matchclip' ";
+
+            // 'matchclip' ";
+            String queryMatchTaskMonitor = "SELECT * FROM monitor WHERE task=1 AND type = 'matchclip' ";
+            String queryNotStopMatch = "SELECT count(*) cou FROM monitor WHERE task=2 AND type = 'matchclip' ";
+
             Statement statement2 = con.createStatement();
-            ResultSet monitorAndChannelrs = statement2.executeQuery(queryMatchTaskMonitor);
+            ResultSet notStoprs = statement2.executeQuery(queryNotStopMatch);
+            int notstopnum = 0;
+            while(notStoprs.next()){
+                notstopnum = notStoprs.getInt("cou");
+            }
+            if(notstopnum==0) {
+                starttime = nexttime;
+            }
+             ResultSet monitorAndChannelrs = statement2.executeQuery(queryMatchTaskMonitor);
             while (monitorAndChannelrs.next()) {
                 FindReplayClipTaskMsg matask = new FindReplayClipTaskMsg();
                 matask.channelPath = "ts/" + monitorAndChannelrs.getString("task_on");
@@ -102,9 +115,10 @@ public class startMatch implements Runnable {
                     matask.refAdClips.add(ref);
                 }
                 if (urltotalnum > 0) {
-                    matask.startTime = Long.toString(System.currentTimeMillis());
+                    matask.startTime = Long.toString(starttime);
                     matask.endTime = Long.toString(Long.parseLong(matask.startTime) + 60 * 60 * 1000);
-                    starttime = Long.parseLong(matask.endTime);
+                    nexttime = Long.parseLong(matask.endTime);
+                    //starttime = Long.parseLong(matask.endTime);
                     String mtask = (new ObjectMapper()).writeValueAsString(matask);
                     File matchf = new File("testjson\\findreplayclip.json");
                     BufferedWriter output3 = new BufferedWriter(new FileWriter(matchf));
@@ -118,22 +132,28 @@ public class startMatch implements Runnable {
                         System.out.println(moid + " wrong");
                         String monitorWrong = "UPDATE monitor SET problem = 1 WHERE id=" + moid;
                         int i = statement.executeUpdate(monitorWrong);
-                    } else {
+                    }
+                    // 统一发送指令检验，-1则task=2，但只有没有task=2 monitor时，改变starttime统一发送
+                    else {
                         if ((new JSONObject(res)).getInt("code") == 0) {
                             if (statement.executeUpdate("UPDATE monitor SET task =1,task_on = '"
                                     + monitorAndChannelrs.getString("") + "' WHERE id=" + moid) > 0)
-                                System.out.print(moid + " send new match task successfully");
-                            ;
+                                System.out.print(moid + " finished task successfully");
+
                         } else if ((new JSONObject(res)).getInt("code") == -1) {
                             System.out.println(moid + " send new task fail ");
-                            // String monitorStop = "UPDATE monitor SET task = 0,task_on='',task_plan=''
-                            // WHERE id=" + id;
+                            String monitorNotStop = "UPDATE monitor SET task = 2 WHERE id=" + moid;
+                            if (statement.executeUpdate(monitorNotStop) > 0) {
+                                System.out.print(moid + " has not finished task");
+                            }
                         }
                     }
-                } 
+                }
 
-                con.close();
-            }
+                }
+            
+            
+            con.close();
 
             // 读取log结果
 
